@@ -17,5 +17,16 @@
     "hintFullName": "Nguyen Duc Hoa",
     "hintPhone": "039123456",
     "accountNumber": "Số tài khoản: ",
-    "balance": "Số dư: "
+    "balance": "Số dư: ",
+    "copied": "Đã sao chép",
+    "languages": "Ngôn ngữ",
+    "themes": "Giao diện",
+    "receive": "Nhận",
+    "history": "Lịch sử",
+    "send": "Gửi",
+    "lixi": "Lixi",
+    "updateInfo": "Cập nhật thông tin tài khoản",
+    "changePassword": "Đổi mật khẩu",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất"
 }

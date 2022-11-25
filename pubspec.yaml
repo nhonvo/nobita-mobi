@@ -41,7 +41,7 @@ dependencies:
   get_cli: ^1.8.1
 
   #MY PACKGAE
-  coder0211: ^0.0.79
+  coder0211: ^0.1.1
 
 dev_dependencies:
   build_runner: ^2.2.1

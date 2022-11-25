@@ -17,5 +17,16 @@
     "hintFullName": "Nguyen Duc Hoa",
     "hintPhone": "039123456",
     "accountNumber": "Account number: ",
-    "balance": "Balance: "
+    "balance": "Balance",
+    "copied": "Copied",
+    "languages": "Languages",
+    "themes": "Themes",
+    "receive": "Receive",
+    "history": "History",
+    "send": "Send",
+    "lixi": "Lixi",
+    "updateInfo": "Update account info",
+    "changePassword": "Change password",
+    "settings": "Settings",
+    "logout": "Logout"
 }

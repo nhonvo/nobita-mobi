@@ -230,11 +230,121 @@ class S {
     );
   }
 
-  /// `Balance: `
+  /// `Balance`
   String get balance {
     return Intl.message(
-      'Balance: ',
+      'Balance',
       name: 'balance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copied`
+  String get copied {
+    return Intl.message(
+      'Copied',
+      name: 'copied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Languages`
+  String get languages {
+    return Intl.message(
+      'Languages',
+      name: 'languages',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Themes`
+  String get themes {
+    return Intl.message(
+      'Themes',
+      name: 'themes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receive`
+  String get receive {
+    return Intl.message(
+      'Receive',
+      name: 'receive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `History`
+  String get history {
+    return Intl.message(
+      'History',
+      name: 'history',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lixi`
+  String get lixi {
+    return Intl.message(
+      'Lixi',
+      name: 'lixi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update account info`
+  String get updateInfo {
+    return Intl.message(
+      'Update account info',
+      name: 'updateInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change password`
+  String get changePassword {
+    return Intl.message(
+      'Change password',
+      name: 'changePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
       desc: '',
       args: [],
     );

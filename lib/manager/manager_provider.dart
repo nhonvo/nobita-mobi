@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nobita/pages/home/store/home_store.dart';
 import 'package:nobita/pages/login/store/login_store.dart';
 import 'package:nobita/pages/main/store/main_store.dart';
+import 'package:nobita/pages/profile/store/profile_store.dart';
 import 'package:nobita/pages/register/store/register_store.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
@@ -24,6 +25,7 @@ class ManagerProvider {
     Provider<LoginStore>(create: (_) => LoginStore()),
     Provider<RegisterStore>(create: (_) => RegisterStore()),
     Provider<HomeStore>(create: (_) => HomeStore()),
+    Provider<ProfileStore>(create: (_) => ProfileStore())
   ];
 
   /// ## Dispose
@@ -40,5 +42,6 @@ class ManagerProvider {
     context.read<LoginStore>().resetValue();
     context.read<RegisterStore>().resetValue();
     context.read<HomeStore>().resetValue();
+    context.read<ProfileStore>().resetValue();
   }
 }

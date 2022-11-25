@@ -1,6 +1,5 @@
 import 'package:coder0211/coder0211.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 import 'package:nobita/pages/home/page/home_page_mobile.dart';
 import 'package:nobita/pages/home/store/home_store.dart';
 

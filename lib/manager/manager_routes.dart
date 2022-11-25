@@ -17,13 +17,15 @@ class ManagerRoutes {
   static String home = '/home';
   static String login = '/login';
   static String register = '/register';
+  static String profile = '/profile';
 
   /// ## Manager contain all action routes of the app
   /// * [splashScreen] is the splash screen of the app and it is the first screen of the app
   static Map<String, Widget Function(BuildContext context)> manager = {
     splash: (context) => const SplashPage(),
-    home: (context) => const MainPage(),
+    home: (context) => const HomePage(),
     login: (context) => const LoginPage(),
-    register: (context) => const RegisterPage()
+    register: (context) => const RegisterPage(),
+    profile: (context) => const ProfilePage()
   };
 }

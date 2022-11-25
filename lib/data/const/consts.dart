@@ -1,4 +1,5 @@
 class Consts {
+  Consts._();
   static const AUTHORIZATION = 'Authorization';
   static const REGEX_REMOVE_ALL_WHILE_SPACING = r'\s+';
 //TIME ANIMATION

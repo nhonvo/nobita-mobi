@@ -48,10 +48,10 @@ class Shadows {
             blurRadius: 8,
             spreadRadius: 3,
             offset: const Offset(0, 4),
-            color: Theme.of(context).dividerColor.withOpacity(0.05)),
+            color: Theme.of(context).dividerColor.withOpacity(0.1)),
         BoxShadow(
             blurRadius: 3,
-            spreadRadius: 0,
+            spreadRadius: 5,
             offset: const Offset(0, 1),
             color: Theme.of(context).dividerColor.withOpacity(0.02))
       ];

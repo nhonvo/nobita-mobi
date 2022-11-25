@@ -7,6 +7,8 @@ part 'home_store.g.dart';
 class HomeStore = _HomeStore with _$HomeStore;
 
 abstract class _HomeStore with Store, BaseStoreMixin {
+  final GlobalKey<ScaffoldState> key = GlobalKey();
+
   @override
   void onInit(BuildContext context) {}
 

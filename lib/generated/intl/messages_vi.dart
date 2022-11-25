@@ -25,8 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountNumber": MessageLookupByLibrary.simpleMessage("Số tài khoản: "),
         "app_name": MessageLookupByLibrary.simpleMessage("Nô bi ta"),
         "balance": MessageLookupByLibrary.simpleMessage("Số dư: "),
+        "changePassword": MessageLookupByLibrary.simpleMessage("Đổi mật khẩu"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
+        "copied": MessageLookupByLibrary.simpleMessage("Đã sao chép"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Tạo tài khoản mới"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -39,12 +41,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintPhone": MessageLookupByLibrary.simpleMessage("039123456"),
         "hintUserName":
             MessageLookupByLibrary.simpleMessage("hdback_hackathon"),
+        "history": MessageLookupByLibrary.simpleMessage("Lịch sử"),
         "iHaveAccount":
             MessageLookupByLibrary.simpleMessage("Tôi đã có tài khoản"),
+        "languages": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
+        "lixi": MessageLookupByLibrary.simpleMessage("Lixi"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
+        "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "phone": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
+        "receive": MessageLookupByLibrary.simpleMessage("Nhận"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng kí"),
+        "send": MessageLookupByLibrary.simpleMessage("Gửi"),
+        "settings": MessageLookupByLibrary.simpleMessage("Cài đặt"),
+        "themes": MessageLookupByLibrary.simpleMessage("Giao diện"),
+        "updateInfo": MessageLookupByLibrary.simpleMessage(
+            "Cập nhật thông tin tài khoản"),
         "username": MessageLookupByLibrary.simpleMessage("Tài khoản")
       };
 }

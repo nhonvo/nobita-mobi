@@ -25,9 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountNumber":
             MessageLookupByLibrary.simpleMessage("Account number: "),
         "app_name": MessageLookupByLibrary.simpleMessage("nobita"),
-        "balance": MessageLookupByLibrary.simpleMessage("Balance: "),
+        "balance": MessageLookupByLibrary.simpleMessage("Balance"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("Change password"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "copied": MessageLookupByLibrary.simpleMessage("Copied"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -40,12 +43,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintPhone": MessageLookupByLibrary.simpleMessage("039123456"),
         "hintUserName":
             MessageLookupByLibrary.simpleMessage("hdback_hackathon"),
+        "history": MessageLookupByLibrary.simpleMessage("History"),
         "iHaveAccount":
             MessageLookupByLibrary.simpleMessage("I have a account"),
+        "languages": MessageLookupByLibrary.simpleMessage("Languages"),
+        "lixi": MessageLookupByLibrary.simpleMessage("Lixi"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "receive": MessageLookupByLibrary.simpleMessage("Receive"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "send": MessageLookupByLibrary.simpleMessage("Send"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "themes": MessageLookupByLibrary.simpleMessage("Themes"),
+        "updateInfo":
+            MessageLookupByLibrary.simpleMessage("Update account info"),
         "username": MessageLookupByLibrary.simpleMessage("Username")
       };
 }
