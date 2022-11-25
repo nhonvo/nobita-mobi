@@ -36,4 +36,12 @@ class Dimens {
   static const MAX_WIDTH_SUGGESST = 512.0;
   //
   static const LETTER_SPACING = 1.0;
+
+  //
+  static const RADIUS_X_SMALL = 3.0;
+  static const RADIUS_SMALL = 5.0;
+  static const RADIUS_MEDIUM = 10.0;
+  static const RADIUS_LARGE = 20.0;
+  static const RADIUS_X_LARGE = 25.0;
+  static const RADIUS_XX_LARGE = 30.0;
 }

@@ -59,6 +59,166 @@ class S {
       args: [],
     );
   }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `hdback_hackathon`
+  String get hintUserName {
+    return Intl.message(
+      'hdback_hackathon',
+      name: 'hintUserName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `******`
+  String get hintPassword {
+    return Intl.message(
+      '******',
+      name: 'hintPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password`
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a new account`
+  String get createNewAccount {
+    return Intl.message(
+      'Create a new account',
+      name: 'createNewAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fullname`
+  String get fullname {
+    return Intl.message(
+      'Fullname',
+      name: 'fullname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I have a account`
+  String get iHaveAccount {
+    return Intl.message(
+      'I have a account',
+      name: 'iHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `a@example.com`
+  String get hintEmail {
+    return Intl.message(
+      'a@example.com',
+      name: 'hintEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nguyen Duc Hoa`
+  String get hintFullName {
+    return Intl.message(
+      'Nguyen Duc Hoa',
+      name: 'hintFullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `039123456`
+  String get hintPhone {
+    return Intl.message(
+      '039123456',
+      name: 'hintPhone',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

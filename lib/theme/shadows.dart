@@ -43,18 +43,18 @@ class Shadows {
         color: AppColors.primary.withOpacity(0.3)),
   ];
 
-  static List<BoxShadow> shadow3 = [
-    BoxShadow(
-        blurRadius: 8,
-        spreadRadius: 3,
-        offset: const Offset(0, 4),
-        color: AppColors.primary.withOpacity(0.1)),
-    BoxShadow(
-        blurRadius: 3,
-        spreadRadius: 0,
-        offset: const Offset(0, 1),
-        color: AppColors.primary.withOpacity(0.2))
-  ];
+  static List<BoxShadow> shadow3(BuildContext context) => [
+        BoxShadow(
+            blurRadius: 8,
+            spreadRadius: 3,
+            offset: const Offset(0, 4),
+            color: Theme.of(context).dividerColor.withOpacity(0.05)),
+        BoxShadow(
+            blurRadius: 3,
+            spreadRadius: 0,
+            offset: const Offset(0, 1),
+            color: Theme.of(context).dividerColor.withOpacity(0.02))
+      ];
 
   static List<BoxShadow> shadow2 = [
     BoxShadow(
@@ -63,9 +63,9 @@ class Shadows {
         offset: const Offset(0, 1),
         color: AppColors.primary.withOpacity(0.2)),
     BoxShadow(
-        blurRadius: 6,
-        spreadRadius: 2,
-        offset: const Offset(0, 2),
+        blurRadius: 1,
+        spreadRadius: 0,
+        offset: const Offset(1, 2),
         color: AppColors.primary.withOpacity(0.1))
   ];
 

@@ -12,7 +12,7 @@ class AppColors {
   AppColors._();
   static const transparent = Colors.transparent;
   // PRIMARY COLORS
-  static const Color primary = Color(0xff1A63A8);
+  static const Color primary = Color(0xffEC6664);
   // NEUTRAL COLORS
   static const Color black = Color(0xff121212);
   static const Color neutral_5 = Color(0xff514F63);

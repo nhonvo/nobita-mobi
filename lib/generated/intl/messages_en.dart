@@ -22,6 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_name": MessageLookupByLibrary.simpleMessage("nobita")
+        "app_name": MessageLookupByLibrary.simpleMessage("nobita"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "createNewAccount":
+            MessageLookupByLibrary.simpleMessage("Create a new account"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot Password"),
+        "fullname": MessageLookupByLibrary.simpleMessage("Fullname"),
+        "hintEmail": MessageLookupByLibrary.simpleMessage("a@example.com"),
+        "hintFullName": MessageLookupByLibrary.simpleMessage("Nguyen Duc Hoa"),
+        "hintPassword": MessageLookupByLibrary.simpleMessage("******"),
+        "hintPhone": MessageLookupByLibrary.simpleMessage("039123456"),
+        "hintUserName":
+            MessageLookupByLibrary.simpleMessage("hdback_hackathon"),
+        "iHaveAccount":
+            MessageLookupByLibrary.simpleMessage("I have a account"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "username": MessageLookupByLibrary.simpleMessage("Username")
       };
 }

@@ -9,10 +9,12 @@
 class Images {
   Images._();
 
-  static const String iconPath = 'lib/res/icons';
-  static const String imagePath = 'lib/res/images';
+  static const String iconPath = 'assets/icons';
+  static const String imagePath = 'assets/images';
   // ICONS
-
+  static const String iconProfile = '$iconPath/icon_profile.svg';
+  static const String iconHome = '$iconPath/icon_home.svg';
+  static const String iconHistory = '$iconPath/icon_history.svg';
   //IMAGES
 
 }

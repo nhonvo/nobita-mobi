@@ -1,3 +1,19 @@
 {
-    "app_name": "Nô bi ta"
+    "app_name": "Nô bi ta",
+    "login": "Đăng nhập",
+    "username": "Tài khoản",
+    "hintUserName": "hdback_hackathon",
+    "password": "Mật khẩu",
+    "hintPassword": "******",
+    "forgotPassword": "Quên mật khẩu?",
+    "createNewAccount": "Tạo tài khoản mới",
+    "fullname": "Họ tên",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "register": "Đăng kí",
+    "iHaveAccount": "Tôi đã có tài khoản",
+    "hintEmail": "a@example.com",
+    "hintFullName": "Nguyen Duc Hoa",
+    "hintPhone": "039123456"
 }

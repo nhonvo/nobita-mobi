@@ -1,20 +1,14 @@
 import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
-import 'package:nobita/pages/app/store/app_store.dart';
-import 'package:provider/provider.dart';
 
 part 'home_store.g.dart';
 
 class HomeStore = _HomeStore with _$HomeStore;
 
 abstract class _HomeStore with Store, BaseStoreMixin {
-  late AppStore appStore;
-
   @override
-  void onInit(BuildContext context) {
-    appStore = context.read<AppStore>();
-  }
+  void onInit(BuildContext context) {}
 
   @override
   void onDispose(BuildContext context) {}

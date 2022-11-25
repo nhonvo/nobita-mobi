@@ -1,3 +1,19 @@
 {
-    "app_name": "nobita"
+    "app_name": "nobita",
+    "login": "Login",
+    "username": "Username",
+    "hintUserName": "hdback_hackathon",
+    "password": "Password",
+    "hintPassword": "******",
+    "forgotPassword": "Forgot Password",
+    "createNewAccount": "Create a new account",
+    "fullname": "Fullname",
+    "email": "Email",
+    "phone": "Phone",
+    "confirmPassword": "Confirm Password",
+    "register": "Register",
+    "iHaveAccount": "I have a account",
+    "hintEmail": "a@example.com",
+    "hintFullName": "Nguyen Duc Hoa",
+    "hintPhone": "039123456"
 }

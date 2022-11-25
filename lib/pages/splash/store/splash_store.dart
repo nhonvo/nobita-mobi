@@ -25,7 +25,7 @@ abstract class _SplashStore with Store, BaseStoreMixin {
 
   Future<void> _splashDelay(BuildContext context) async {
     await Future.delayed(const Duration(seconds: Consts.DELAY_SPLASH_SCREEN));
-    BaseNavigation.push(context, routeName: ManagerRoutes.home);
+    BaseNavigation.push(context, routeName: ManagerRoutes.login);
   }
 }
 

@@ -22,6 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_name": MessageLookupByLibrary.simpleMessage("Nô bi ta")
+        "app_name": MessageLookupByLibrary.simpleMessage("Nô bi ta"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
+        "createNewAccount":
+            MessageLookupByLibrary.simpleMessage("Tạo tài khoản mới"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
+        "fullname": MessageLookupByLibrary.simpleMessage("Họ tên"),
+        "hintEmail": MessageLookupByLibrary.simpleMessage("a@example.com"),
+        "hintFullName": MessageLookupByLibrary.simpleMessage("Nguyen Duc Hoa"),
+        "hintPassword": MessageLookupByLibrary.simpleMessage("******"),
+        "hintPhone": MessageLookupByLibrary.simpleMessage("039123456"),
+        "hintUserName":
+            MessageLookupByLibrary.simpleMessage("hdback_hackathon"),
+        "iHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Tôi đã có tài khoản"),
+        "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
+        "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
+        "phone": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
+        "register": MessageLookupByLibrary.simpleMessage("Đăng kí"),
+        "username": MessageLookupByLibrary.simpleMessage("Tài khoản")
       };
 }
