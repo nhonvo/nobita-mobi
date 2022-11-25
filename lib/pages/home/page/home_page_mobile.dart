@@ -13,7 +13,14 @@ class HomePageMobile extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: [const ProfileCard()],
+          children: [
+            ProfileCard(
+              name: 'Nguyen Duc Hoa',
+              email: 'a@example.com',
+              accountNumber: '124121232139',
+              balance: '213439284',
+            )
+          ],
         ),
       ),
     );

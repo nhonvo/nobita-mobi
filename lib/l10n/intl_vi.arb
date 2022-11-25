@@ -15,5 +15,7 @@
     "iHaveAccount": "Tôi đã có tài khoản",
     "hintEmail": "a@example.com",
     "hintFullName": "Nguyen Duc Hoa",
-    "hintPhone": "039123456"
+    "hintPhone": "039123456",
+    "accountNumber": "Số tài khoản: ",
+    "balance": "Số dư: "
 }

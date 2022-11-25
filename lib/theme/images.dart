@@ -15,6 +15,7 @@ class Images {
   static const String iconProfile = '$iconPath/icon_profile.svg';
   static const String iconHome = '$iconPath/icon_home.svg';
   static const String iconHistory = '$iconPath/icon_history.svg';
+  static const String iconCopy = '$iconPath/icon_copy.svg';
   //IMAGES
 
 }

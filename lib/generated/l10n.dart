@@ -219,6 +219,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Account number: `
+  String get accountNumber {
+    return Intl.message(
+      'Account number: ',
+      name: 'accountNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Balance: `
+  String get balance {
+    return Intl.message(
+      'Balance: ',
+      name: 'balance',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

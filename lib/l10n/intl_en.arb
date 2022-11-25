@@ -15,5 +15,7 @@
     "iHaveAccount": "I have a account",
     "hintEmail": "a@example.com",
     "hintFullName": "Nguyen Duc Hoa",
-    "hintPhone": "039123456"
+    "hintPhone": "039123456",
+    "accountNumber": "Account number: ",
+    "balance": "Balance: "
 }
