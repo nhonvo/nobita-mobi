@@ -1,5 +1,4 @@
 import 'package:coder0211/coder0211.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:nobita/pages/receive/page/receive_page_mobile.dart';
 import 'package:nobita/pages/receive/store/receive_store.dart';

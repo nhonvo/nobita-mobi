@@ -1,5 +1,6 @@
 import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:nobita/data/const/consts.dart';
 import 'package:nobita/generated/l10n.dart';
 import 'package:nobita/manager/manager_path_routes.dart';
@@ -21,7 +22,6 @@ class HomePageMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: store.key,
         drawer: const ProfilePage(),
         body: Builder(
           builder: (context) => SafeArea(
@@ -50,7 +50,8 @@ class HomePageMobile extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: Dimens.SCREEN_PADDING),
-                                child: Text('Nguyen Duc Hoa',
+                                child: Text(
+                                    store.loginStore.user.fullName ?? '',
                                     style: Theme.of(context)
                                         .textTheme
                                         .displayMedium
@@ -64,7 +65,7 @@ class HomePageMobile extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: Dimens.SCREEN_PADDING),
-                                child: Text('nguyenduchoa.data@gmail.com',
+                                child: Text(store.loginStore.user.email ?? '',
                                     style: Theme.of(context)
                                         .textTheme
                                         .displaySmall),
@@ -86,10 +87,12 @@ class HomePageMobile extends StatelessWidget {
                   const SizedBox(width: Dimens.SCREEN_PADDING),
                 ]),
                 const SizedBox(height: Dimens.SCREEN_PADDING),
-                const ProfileCard(
-                  accountNumber: '124121232139',
-                  balance: '213439284',
-                ),
+                Observer(builder: (_) {
+                  return ProfileCard(
+                    accountNumber: store.loginStore.user.accountNo ?? '',
+                    balance: store.loginStore.user.balance ?? '0',
+                  );
+                }),
                 const SizedBox(height: Dimens.PADDING_LARGE),
                 SizedBox(
                   height: 0.25.w(context) + 45,

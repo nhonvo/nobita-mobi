@@ -57,7 +57,7 @@ class ProfileCard extends StatelessWidget {
                 ],
               ),
               QrImage(
-                data: '1234567890',
+                data: accountNumber,
                 version: QrVersions.auto,
                 size: 0.2.w(context),
                 foregroundColor: AppColors.white,

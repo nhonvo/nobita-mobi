@@ -30,6 +30,7 @@ class LoginPageMobile extends StatelessWidget {
                 hintText: S.of(context).hintUserName,
                 borderColor: Theme.of(context).dividerColor.withOpacity(0.2),
                 title: S.of(context).username,
+                textEditingController: store.userNameController,
               ),
               const SizedBox(
                 height: Dimens.PADDING_MEDIUM,
@@ -44,6 +45,7 @@ class LoginPageMobile extends StatelessWidget {
                 title: S.of(context).password,
                 isModePassword: true,
                 maxLines: 1,
+                textEditingController: store.passwordController,
               ),
               const SizedBox(
                 height: Dimens.PADDING_MEDIUM,

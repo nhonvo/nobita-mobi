@@ -57,7 +57,7 @@ class ReceivePageMobile extends StatelessWidget {
                     height: 0.3.w(context) / 2,
                   ),
                   QrImage(
-                    data: '1234567890',
+                    data: store.loginStore.user.accountNo ?? '',
                     version: QrVersions.auto,
                     size: 0.45.w(context),
                     foregroundColor: Theme.of(context).highlightColor,
@@ -69,7 +69,7 @@ class ReceivePageMobile extends StatelessWidget {
                     onTap: () {
                       BaseUtils.copy(
                         context,
-                        content: '',
+                        content: store.loginStore.user.accountNo ?? '',
                         text: S.of(context).copied,
                         bgColor: Theme.of(context).primaryColor,
                       );
@@ -78,7 +78,7 @@ class ReceivePageMobile extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          '12323423432',
+                          store.loginStore.user.accountNo ?? '',
                           style: Theme.of(context)
                               .textTheme
                               .headlineMedium
@@ -101,7 +101,7 @@ class ReceivePageMobile extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: Dimens.SCREEN_PADDING),
-                    child: Text('Nguyen Duc Hoa',
+                    child: Text(store.loginStore.user.fullName ?? '',
                         style: Theme.of(context)
                             .textTheme
                             .headlineLarge

@@ -2,15 +2,22 @@ import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:nobita/data/const/consts.dart';
+import 'package:nobita/manager/manager_key_storage.dart';
 import 'package:nobita/manager/manager_path_routes.dart';
+import 'package:nobita/pages/login/store/login_store.dart';
+import 'package:provider/provider.dart';
 
 part 'splash_store.g.dart';
 
 class SplashStore = _SplashStore with _$SplashStore;
 
 abstract class _SplashStore with Store, BaseStoreMixin {
+  late LoginStore _loginStore;
+
   @override
-  void onInit(BuildContext context) {}
+  void onInit(BuildContext context) {
+    _loginStore = context.read<LoginStore>();
+  }
 
   @override
   void onDispose(BuildContext context) {}
@@ -24,8 +31,9 @@ abstract class _SplashStore with Store, BaseStoreMixin {
   void resetValue() {}
 
   Future<void> _splashDelay(BuildContext context) async {
-    await Future.delayed(const Duration(seconds: Consts.DELAY_SPLASH_SCREEN));
-    BaseNavigation.push(context, routeName: ManagerRoutes.login);
+    if (!await _loginStore.autoLogin(context))
+      BaseNavigation.push(context, routeName: ManagerRoutes.login);
+    // await Future.delayed(const Duration(seconds: Consts.DELAY_SPLASH_SCREEN));
   }
 }
 

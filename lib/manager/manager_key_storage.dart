@@ -12,4 +12,5 @@ class ManagerKeyStorage {
   static const String accessToken = 'ACCESS_TOKEN';
   static const String language = 'LANGUAGE';
   static const String theme = 'THEME';
+  static const String user = 'USER';
 }

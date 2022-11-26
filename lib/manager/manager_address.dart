@@ -9,8 +9,12 @@
 /// ```
 class ManagerAddress {
   ManagerAddress._();
-  static const String domain = 'https://dev.api.cohost.club';
+  static const String domain = 'https://hdbank-api.azurewebsites.net/api';
   // static const String domain = 'http://192.168.1.107:3001';
   //!--        BASE URL       -->
-
+  static const String baseUser = '/User';
+  static const String register = '$baseUser/register';
+  static const String login = '$baseUser/login';
+  static const String getInfo = '$baseUser/get-info';
+  static const String getBalance = '$baseUser/balance';
 }

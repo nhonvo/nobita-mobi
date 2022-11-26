@@ -30,6 +30,7 @@ class RegisterPageMobile extends StatelessWidget {
                 hintText: S.of(context).hintFullName,
                 borderColor: Theme.of(context).dividerColor.withOpacity(0.2),
                 title: S.of(context).fullname,
+                textEditingController: store.fullNameController,
               ),
               const SizedBox(
                 height: Dimens.PADDING_MEDIUM,
@@ -42,6 +43,7 @@ class RegisterPageMobile extends StatelessWidget {
                 hintText: S.of(context).hintUserName,
                 borderColor: Theme.of(context).dividerColor.withOpacity(0.2),
                 title: S.of(context).username,
+                textEditingController: store.userNameController,
               ),
               const SizedBox(
                 height: Dimens.PADDING_MEDIUM,
@@ -54,6 +56,7 @@ class RegisterPageMobile extends StatelessWidget {
                 hintText: S.of(context).hintEmail,
                 borderColor: Theme.of(context).dividerColor.withOpacity(0.2),
                 title: S.of(context).email,
+                textEditingController: store.emailController,
               ),
               const SizedBox(
                 height: Dimens.PADDING_MEDIUM,
@@ -66,6 +69,7 @@ class RegisterPageMobile extends StatelessWidget {
                 hintText: S.of(context).hintPhone,
                 borderColor: Theme.of(context).dividerColor.withOpacity(0.2),
                 title: S.of(context).phone,
+                textEditingController: store.phoneController,
               ),
               const SizedBox(
                 height: Dimens.PADDING_MEDIUM,
@@ -78,6 +82,9 @@ class RegisterPageMobile extends StatelessWidget {
                 hintText: S.of(context).hintPassword,
                 borderColor: Theme.of(context).dividerColor.withOpacity(0.2),
                 title: S.of(context).password,
+                textEditingController: store.passwordController,
+                isModePassword: true,
+                maxLines: 1,
               ),
               const SizedBox(
                 height: Dimens.PADDING_MEDIUM,
@@ -90,6 +97,9 @@ class RegisterPageMobile extends StatelessWidget {
                 hintText: S.of(context).hintPassword,
                 borderColor: Theme.of(context).dividerColor.withOpacity(0.2),
                 title: S.of(context).confirmPassword,
+                textEditingController: store.confirmPasswordController,
+                isModePassword: true,
+                maxLines: 1,
               ),
               const SizedBox(
                 height: Dimens.PADDING_MEDIUM,

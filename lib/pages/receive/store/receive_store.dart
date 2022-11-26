@@ -1,19 +1,18 @@
 import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
-import 'package:nobita/pages/app/store/app_store.dart';
+import 'package:nobita/pages/login/store/login_store.dart';
 import 'package:provider/provider.dart';
-
 part 'receive_store.g.dart';
 
 class ReceiveStore = _ReceiveStore with _$ReceiveStore;
 
 abstract class _ReceiveStore with Store, BaseStoreMixin {
-  late AppStore appStore;
+  late LoginStore loginStore;
 
   @override
   void onInit(BuildContext context) {
-    appStore = context.read<AppStore>();
+    loginStore = context.read<LoginStore>();
   }
 
   @override

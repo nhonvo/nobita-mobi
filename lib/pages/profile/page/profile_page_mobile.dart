@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:nobita/enums/enum_languages.dart';
 import 'package:nobita/generated/l10n.dart';
+import 'package:nobita/manager/manager_key_storage.dart';
 import 'package:nobita/manager/manager_path_routes.dart';
 import 'package:nobita/pages/profile/store/profile_store.dart';
 import 'package:nobita/theme/dimens.dart';
@@ -95,7 +96,8 @@ class ProfilePageMobile extends StatelessWidget {
     store.appStore.toggleTheme();
   }
 
-  void _onPressedLogout(BuildContext context) {
+  Future<void> _onPressedLogout(BuildContext context) async {
+    await BaseSharedPreferences.remove(ManagerKeyStorage.user);
     BaseNavigation.push(context,
         routeName: ManagerRoutes.login, clearStack: true);
   }
