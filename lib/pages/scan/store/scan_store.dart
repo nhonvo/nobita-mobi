@@ -1,25 +1,39 @@
 import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
+import 'package:qr_code_scanner/qr_code_scanner.dart';
 
-part 'home_store.g.dart';
+part 'scan_store.g.dart';
 
-class HomeStore = _HomeStore with _$HomeStore;
+class ScanStore = _ScanStore with _$ScanStore;
 
-abstract class _HomeStore with Store, BaseStoreMixin {
-  GlobalKey<ScaffoldState> key = GlobalKey();
+abstract class _ScanStore with Store, BaseStoreMixin {
+  GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
+  Barcode? result;
+  QRViewController? controller;
 
   @override
   void onInit(BuildContext context) {}
 
   @override
-  void onDispose(BuildContext context) {}
+  void onDispose(BuildContext context) {
+    controller?.dispose();
+  }
 
   @override
   Future<void> onWidgetBuildDone(BuildContext context) async {}
 
   @override
   void resetValue() {}
+
+  @action
+  void onQRViewCreated(QRViewController controller) {
+    this.controller = controller;
+    controller.scannedDataStream.listen((scanData) {
+      result = scanData;
+      print(result?.code);
+    });
+  }
 }
 
 /// We are using auto code generation to generate code for MobX .

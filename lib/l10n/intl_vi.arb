@@ -28,5 +28,6 @@
     "updateInfo": "Cập nhật thông tin tài khoản",
     "changePassword": "Đổi mật khẩu",
     "settings": "Cài đặt",
-    "logout": "Đăng xuất"
+    "logout": "Đăng xuất",
+    "scan": "Quét"
 }

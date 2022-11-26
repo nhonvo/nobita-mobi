@@ -24,6 +24,7 @@ class Images {
   static const String iconLanguageVi = '$iconPath/icon_language_vi.png';
   static const String iconTheme = '$iconPath/icon_theme.svg';
   static const String iconLogout = '$iconPath/icon_logout.svg';
+  static const String iconScan = '$iconPath/icon_scan.svg';
   //IMAGES
 
 }

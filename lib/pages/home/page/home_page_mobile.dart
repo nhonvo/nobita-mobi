@@ -2,6 +2,8 @@ import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:nobita/data/const/consts.dart';
 import 'package:nobita/generated/l10n.dart';
+import 'package:nobita/manager/manager_path_routes.dart';
+import 'package:nobita/manager/manager_provider.dart';
 import 'package:nobita/pages/home/store/home_store.dart';
 import 'package:nobita/pages/profile/page/profile_page.dart';
 import 'package:nobita/theme/colors.dart';
@@ -26,6 +28,7 @@ class HomePageMobile extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: Dimens.SCREEN_PADDING),
                 Row(children: [
                   const SizedBox(width: Dimens.SCREEN_PADDING),
                   GestureDetector(
@@ -37,30 +40,50 @@ class HomePageMobile extends StatelessWidget {
                       borderColor: AppColors.primary,
                     ),
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: Dimens.SCREEN_PADDING),
-                        child: Text('Nguyen Duc Hoa',
-                            style: Theme.of(context)
-                                .textTheme
-                                .displayMedium
-                                ?.copyWith(
-                                    color: Theme.of(context).primaryColor)),
-                      ),
-                      const SizedBox(
-                        height: Dimens.PADDING_X_SMALL,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: Dimens.SCREEN_PADDING),
-                        child: Text('nguyenduchoa.data@gmail.com',
-                            style: Theme.of(context).textTheme.displaySmall),
-                      ),
-                    ],
-                  )
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: Dimens.SCREEN_PADDING),
+                                child: Text('Nguyen Duc Hoa',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayMedium
+                                        ?.copyWith(
+                                            color: Theme.of(context)
+                                                .primaryColor)),
+                              ),
+                              const SizedBox(
+                                height: Dimens.PADDING_X_SMALL,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: Dimens.SCREEN_PADDING),
+                                child: Text('nguyenduchoa.data@gmail.com',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displaySmall),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: Dimens.PADDING_X_SMALL),
+                  GestureDetector(
+                    onTap: () => _onPressedScan.call(context),
+                    child: BaseSVG(
+                        path: Images.iconScan,
+                        height: Dimens.ICON_LARGE,
+                        color: Theme.of(context).highlightColor),
+                  ),
+                  const SizedBox(width: Dimens.SCREEN_PADDING),
                 ]),
                 const SizedBox(height: Dimens.SCREEN_PADDING),
                 const ProfileCard(
@@ -87,7 +110,9 @@ class HomePageMobile extends StatelessWidget {
                       BTNHomeFeature(
                         imagePath: Images.iconReceive,
                         lable: S.of(context).receive,
-                        onPressed: () {},
+                        onPressed: () {
+                          _onPressedReceive.call(context);
+                        },
                       ),
                       BTNHomeFeature(
                         imagePath: Images.iconLixi,
@@ -126,5 +151,13 @@ class HomePageMobile extends StatelessWidget {
             ),
           ),
         ));
+  }
+
+  void _onPressedReceive(BuildContext context) {
+    BaseNavigation.push(context, routeName: ManagerRoutes.receive);
+  }
+
+  void _onPressedScan(BuildContext context) {
+    BaseNavigation.push(context, routeName: ManagerRoutes.scan);
   }
 }

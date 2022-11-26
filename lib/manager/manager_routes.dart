@@ -18,6 +18,8 @@ class ManagerRoutes {
   static String login = '/login';
   static String register = '/register';
   static String profile = '/profile';
+  static String receive = '/receive';
+  static String scan = '/scan';
 
   /// ## Manager contain all action routes of the app
   /// * [splashScreen] is the splash screen of the app and it is the first screen of the app
@@ -26,6 +28,8 @@ class ManagerRoutes {
     home: (context) => const HomePage(),
     login: (context) => const LoginPage(),
     register: (context) => const RegisterPage(),
-    profile: (context) => const ProfilePage()
+    profile: (context) => const ProfilePage(),
+    receive: (context) => const ReceivePage(),
+    scan: (context) => const ScanPage(),
   };
 }

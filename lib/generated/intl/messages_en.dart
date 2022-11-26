@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "receive": MessageLookupByLibrary.simpleMessage("Receive"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "scan": MessageLookupByLibrary.simpleMessage("Scan"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "themes": MessageLookupByLibrary.simpleMessage("Themes"),

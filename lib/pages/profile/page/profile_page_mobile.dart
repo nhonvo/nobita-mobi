@@ -27,8 +27,9 @@ class ProfilePageMobile extends StatelessWidget {
         borderRadius: const BorderRadius.horizontal(right: Radius.circular(26)),
         child: SafeArea(
           child: Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: Dimens.SCREEN_PADDING),
+            padding: const EdgeInsets.symmetric(
+                horizontal: Dimens.SCREEN_PADDING,
+                vertical: Dimens.SCREEN_PADDING),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

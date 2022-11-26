@@ -1,16 +1,20 @@
 import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
+import 'package:nobita/pages/app/store/app_store.dart';
+import 'package:provider/provider.dart';
 
-part 'home_store.g.dart';
+part 'receive_store.g.dart';
 
-class HomeStore = _HomeStore with _$HomeStore;
+class ReceiveStore = _ReceiveStore with _$ReceiveStore;
 
-abstract class _HomeStore with Store, BaseStoreMixin {
-  GlobalKey<ScaffoldState> key = GlobalKey();
+abstract class _ReceiveStore with Store, BaseStoreMixin {
+  late AppStore appStore;
 
   @override
-  void onInit(BuildContext context) {}
+  void onInit(BuildContext context) {
+    appStore = context.read<AppStore>();
+  }
 
   @override
   void onDispose(BuildContext context) {}

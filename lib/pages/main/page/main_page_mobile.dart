@@ -34,12 +34,4 @@ class MainPageMobile extends StatelessWidget {
   void _onPressedToggleTheme() {
     store.appStore.toggleTheme();
   }
-
-  void _onPressedToogleLanguage(BuildContext context) {
-    if (store.appStore.locale == Locale(EnumLanguages.vi.name)) {
-      store.appStore.setLanguages(context, languageCode: EnumLanguages.en.name);
-    } else {
-      store.appStore.setLanguages(context, languageCode: EnumLanguages.vi.name);
-    }
-  }
 }

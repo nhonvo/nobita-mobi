@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "receive": MessageLookupByLibrary.simpleMessage("Nhận"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng kí"),
+        "scan": MessageLookupByLibrary.simpleMessage("Quét"),
         "send": MessageLookupByLibrary.simpleMessage("Gửi"),
         "settings": MessageLookupByLibrary.simpleMessage("Cài đặt"),
         "themes": MessageLookupByLibrary.simpleMessage("Giao diện"),

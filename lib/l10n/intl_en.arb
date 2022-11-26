@@ -28,5 +28,6 @@
     "updateInfo": "Update account info",
     "changePassword": "Change password",
     "settings": "Settings",
-    "logout": "Logout"
+    "logout": "Logout",
+    "scan": "Scan"
 }

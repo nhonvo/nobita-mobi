@@ -5,6 +5,7 @@ import 'package:nobita/theme/colors.dart';
 import 'package:nobita/theme/dimens.dart';
 import 'package:nobita/theme/images.dart';
 import 'package:nobita/theme/shadows.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class ProfileCard extends StatelessWidget {
   final String accountNumber;
@@ -25,8 +26,8 @@ class ProfileCard extends StatelessWidget {
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
           colors: <Color>[
-            Color(0xff89216b),
-            Color(0xffda4453),
+            AppColors.primary,
+            AppColors.red,
           ],
         ),
       ),
@@ -55,9 +56,11 @@ class ProfileCard extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.asset(
-                Images.iconRocket,
-                height: 0.2.w(context),
+              QrImage(
+                data: '1234567890',
+                version: QrVersions.auto,
+                size: 0.2.w(context),
+                foregroundColor: AppColors.white,
               ),
             ],
           ),
