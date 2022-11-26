@@ -5,6 +5,7 @@ import 'package:nobita/enums/enum_languages.dart';
 import 'package:nobita/generated/l10n.dart';
 import 'package:nobita/manager/manager_key_storage.dart';
 import 'package:nobita/manager/manager_path_routes.dart';
+import 'package:nobita/manager/manager_provider.dart';
 import 'package:nobita/pages/profile/store/profile_store.dart';
 import 'package:nobita/theme/dimens.dart';
 import 'package:nobita/theme/images.dart';
@@ -98,6 +99,7 @@ class ProfilePageMobile extends StatelessWidget {
 
   Future<void> _onPressedLogout(BuildContext context) async {
     await BaseSharedPreferences.remove(ManagerKeyStorage.user);
+    ManagerProvider.dispose(context);
     BaseNavigation.push(context,
         routeName: ManagerRoutes.login, clearStack: true);
   }

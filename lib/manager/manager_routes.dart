@@ -20,6 +20,8 @@ class ManagerRoutes {
   static String profile = '/profile';
   static String receive = '/receive';
   static String scan = '/scan';
+  static String send = '/send';
+  static String sendTicket = '/sendTicket';
 
   /// ## Manager contain all action routes of the app
   /// * [splashScreen] is the splash screen of the app and it is the first screen of the app
@@ -31,5 +33,7 @@ class ManagerRoutes {
     profile: (context) => const ProfilePage(),
     receive: (context) => const ReceivePage(),
     scan: (context) => const ScanPage(),
+    send: (context) => const SendPage(),
+    sendTicket: (context) => const SendTicketPage()
   };
 }

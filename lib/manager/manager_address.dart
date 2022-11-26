@@ -17,4 +17,6 @@ class ManagerAddress {
   static const String login = '$baseUser/login';
   static const String getInfo = '$baseUser/get-info';
   static const String getBalance = '$baseUser/balance';
+  static const String getInfoById = '$baseUser/get-info-by-account-number';
+  static const String tranfer = '$baseUser/tranfer';
 }

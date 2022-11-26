@@ -220,10 +220,10 @@ class S {
     );
   }
 
-  /// `Account number: `
+  /// `Account number`
   String get accountNumber {
     return Intl.message(
-      'Account number: ',
+      'Account number',
       name: 'accountNumber',
       desc: '',
       args: [],
@@ -355,6 +355,106 @@ class S {
     return Intl.message(
       'Scan',
       name: 'scan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continueT {
+    return Intl.message(
+      'Continue',
+      name: 'continueT',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amount`
+  String get amount {
+    return Intl.message(
+      'Amount',
+      name: 'amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please fill all data`
+  String get pleaseFillAllData {
+    return Intl.message(
+      'Please fill all data',
+      name: 'pleaseFillAllData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `INTERNET UNAVAILABLE`
+  String get interNetUnavailable {
+    return Intl.message(
+      'INTERNET UNAVAILABLE',
+      name: 'interNetUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Info Receiver`
+  String get infoReceiver {
+    return Intl.message(
+      'Info Receiver',
+      name: 'infoReceiver',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sended`
+  String get sended {
+    return Intl.message(
+      'Sended',
+      name: 'sended',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong User Name or Password`
+  String get wrongUserNameOrPassword {
+    return Intl.message(
+      'Wrong User Name or Password',
+      name: 'wrongUserNameOrPassword',
       desc: '',
       args: [],
     );

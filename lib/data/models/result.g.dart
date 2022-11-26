@@ -10,7 +10,7 @@ Result _$ResultFromJson(Map<String, dynamic> json) => Result(
       succeeded: json['succeeded'] as bool?,
       message: json['message'] as String?,
       resultObject: json['resultObject'],
-      validationErrors: json['validationErrors'] as String?,
+      validationErrors: json['validationErrors'],
     );
 
 Map<String, dynamic> _$ResultToJson(Result instance) => <String, dynamic>{

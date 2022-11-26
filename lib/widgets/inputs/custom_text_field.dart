@@ -21,32 +21,32 @@ class CustomTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final List<TextInputFormatter> formatterList;
   final String? title;
-  const CustomTextField({
-    Key? key,
-    this.hintText,
-    this.isModeBorder = false,
-    this.height,
-    this.isModePassword = false,
-    this.onChanged,
-    this.onSubmitted,
-    this.textEditingController,
-    this.obscuringCharacter = '•',
-    required this.bgColor,
-    this.prefixIcon,
-    this.maxLines,
-    this.keyboardType,
-    this.initialValue,
-    required this.style,
-    this.focusNode,
-    this.autofocus = false,
-    this.formatterList = const [],
-    this.maxLength,
-    this.borderColor = AppColors.transparent,
-    this.isShowBG = false,
-    required this.isEditMode,
-    required this.cusorColor,
-    this.title,
-  }) : super(key: key);
+  const CustomTextField(
+      {Key? key,
+      this.hintText,
+      this.isModeBorder = false,
+      this.height,
+      this.isModePassword = false,
+      this.onChanged,
+      this.onSubmitted,
+      this.textEditingController,
+      this.obscuringCharacter = '•',
+      required this.bgColor,
+      this.prefixIcon,
+      this.maxLines,
+      this.keyboardType,
+      this.initialValue,
+      required this.style,
+      this.focusNode,
+      this.autofocus = false,
+      this.formatterList = const [],
+      this.maxLength,
+      this.borderColor = AppColors.transparent,
+      this.isShowBG = false,
+      required this.isEditMode,
+      required this.cusorColor,
+      this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

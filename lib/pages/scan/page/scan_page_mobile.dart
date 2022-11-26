@@ -24,7 +24,9 @@ class ScanPageMobile extends StatelessWidget {
             width: 1.0.w(context),
             child: QRView(
                 key: store.qrKey,
-                onQRViewCreated: store.onQRViewCreated,
+                onQRViewCreated: (controller) async {
+                  await store.onQRViewCreated(controller, context);
+                },
                 overlayMargin: const EdgeInsets.all(Dimens.SCREEN_PADDING)),
           ),
           Container(

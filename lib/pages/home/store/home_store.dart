@@ -6,6 +6,7 @@ import 'package:mobx/mobx.dart';
 import 'package:nobita/data/const/consts.dart';
 import 'package:nobita/data/models/result.dart';
 import 'package:nobita/data/models/user.dart';
+import 'package:nobita/generated/l10n.dart';
 import 'package:nobita/manager/manager_address.dart';
 import 'package:nobita/pages/login/store/login_store.dart';
 import 'package:provider/provider.dart';
@@ -29,14 +30,14 @@ abstract class _HomeStore with Store, BaseStoreMixin {
 
   @override
   Future<void> onWidgetBuildDone(BuildContext context) async {
-    await getBalance.call();
+    await getBalance.call(context);
   }
 
   @override
   void resetValue() {}
 
   @action
-  Future<void> getBalance() async {
+  Future<void> getBalance(BuildContext context) async {
     print(loginStore.user.toJson().toString());
     await _baseAPI.fetchData(
       ManagerAddress.getBalance,
@@ -57,7 +58,8 @@ abstract class _HomeStore with Store, BaseStoreMixin {
         case ApiStatus.INTERNET_UNAVAILABLE:
           {
             printLogYellow('INTERNET_UNAVAILABLE');
-            BaseUtils.showToast('INTERNET UNAVAILABLE', bgColor: Colors.red);
+            BaseUtils.showToast(S.of(context).interNetUnavailable,
+                bgColor: Colors.red);
             break;
           }
         default:

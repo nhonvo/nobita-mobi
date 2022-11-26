@@ -1,39 +1,38 @@
 import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
-import 'package:nobita/data/const/consts.dart';
-import 'package:nobita/manager/manager_key_storage.dart';
-import 'package:nobita/manager/manager_path_routes.dart';
-import 'package:nobita/pages/login/store/login_store.dart';
+import 'package:nobita/pages/send/store/send_store.dart';
 import 'package:provider/provider.dart';
 
-part 'splash_store.g.dart';
+part 'send_ticket_store.g.dart';
 
-class SplashStore = _SplashStore with _$SplashStore;
+class SendTicketStore = _SendTicketStore with _$SendTicketStore;
 
-abstract class _SplashStore with Store, BaseStoreMixin {
-  late LoginStore _loginStore;
+abstract class _SendTicketStore with Store, BaseStoreMixin {
+  late SendStore sendStore;
+
+  @observable
+  bool _isShowLoading = false;
+
+  bool get isShowLoading => _isShowLoading;
+
+  set isShowLoading(bool isShowLoading) {
+    _isShowLoading = isShowLoading;
+  }
 
   @override
   void onInit(BuildContext context) {
-    _loginStore = context.read<LoginStore>();
+    sendStore = context.read<SendStore>();
   }
 
   @override
   void onDispose(BuildContext context) {}
 
   @override
-  Future<void> onWidgetBuildDone(BuildContext context) async {
-    await _splashDelay(context);
-  }
+  Future<void> onWidgetBuildDone(BuildContext context) async {}
 
   @override
   void resetValue() {}
-
-  Future<void> _splashDelay(BuildContext context) async {
-    if (!await _loginStore.autoLogin(context))
-      BaseNavigation.push(context, routeName: ManagerRoutes.login);
-  }
 }
 
 /// We are using auto code generation to generate code for MobX .

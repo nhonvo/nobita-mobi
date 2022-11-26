@@ -26,7 +26,6 @@ class HomePageMobile extends StatelessWidget {
         body: Builder(
           builder: (context) => SafeArea(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: Dimens.SCREEN_PADDING),
                 Row(children: [
@@ -87,69 +86,79 @@ class HomePageMobile extends StatelessWidget {
                   const SizedBox(width: Dimens.SCREEN_PADDING),
                 ]),
                 const SizedBox(height: Dimens.SCREEN_PADDING),
-                Observer(builder: (_) {
-                  return ProfileCard(
-                    accountNumber: store.loginStore.user.accountNo ?? '',
-                    balance: store.loginStore.user.balance ?? '0',
-                  );
-                }),
-                const SizedBox(height: Dimens.PADDING_LARGE),
-                SizedBox(
-                  height: 0.25.w(context) + 45,
-                  width: 1.0.w(context),
+                Expanded(
                   child: ListView(
-                    scrollDirection: Axis.horizontal,
                     physics: const BouncingScrollPhysics(),
+                    shrinkWrap: true,
                     children: [
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(left: Dimens.SCREEN_PADDING),
-                        child: BTNHomeFeature(
-                          imagePath: Images.iconSend,
-                          lable: S.of(context).send,
-                          onPressed: () {},
+                      const SizedBox(height: Dimens.SCREEN_PADDING),
+                      Observer(builder: (_) {
+                        return ProfileCard(
+                          accountNumber: store.loginStore.user.accountNo ?? '',
+                          balance: store.loginStore.user.balance ?? '0',
+                        );
+                      }),
+                      const SizedBox(height: Dimens.PADDING_LARGE),
+                      SizedBox(
+                        height: 0.25.w(context) + 45,
+                        width: 1.0.w(context),
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,
+                          physics: const BouncingScrollPhysics(),
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: Dimens.SCREEN_PADDING),
+                              child: BTNHomeFeature(
+                                imagePath: Images.iconSend,
+                                lable: S.of(context).send,
+                                onPressed: () {
+                                  _onPressedSend.call(context);
+                                },
+                              ),
+                            ),
+                            BTNHomeFeature(
+                              imagePath: Images.iconReceive,
+                              lable: S.of(context).receive,
+                              onPressed: () {
+                                _onPressedReceive.call(context);
+                              },
+                            ),
+                            BTNHomeFeature(
+                              imagePath: Images.iconLixi,
+                              lable: S.of(context).lixi,
+                              onPressed: () {},
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  right: Dimens.SCREEN_PADDING),
+                              child: BTNHomeFeature(
+                                imagePath: Images.iconRocket,
+                                lable: 'Recieve',
+                                onPressed: () {},
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      BTNHomeFeature(
-                        imagePath: Images.iconReceive,
-                        lable: S.of(context).receive,
-                        onPressed: () {
-                          _onPressedReceive.call(context);
-                        },
-                      ),
-                      BTNHomeFeature(
-                        imagePath: Images.iconLixi,
-                        lable: S.of(context).lixi,
-                        onPressed: () {},
-                      ),
                       Padding(
-                        padding:
-                            const EdgeInsets.only(right: Dimens.SCREEN_PADDING),
-                        child: BTNHomeFeature(
-                          imagePath: Images.iconRocket,
-                          lable: 'Recieve',
-                          onPressed: () {},
-                        ),
-                      ),
+                          padding: const EdgeInsets.all(Dimens.SCREEN_PADDING),
+                          child: Text(S.of(context).history,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headlineMedium
+                                  ?.copyWith(color: AppColors.primary))),
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemBuilder: (BuildContext context, int index) =>
+                            const ItemHistoryTransfer(),
+                        itemCount: 5,
+                      )
                     ],
                   ),
                 ),
-                Padding(
-                    padding: const EdgeInsets.all(Dimens.SCREEN_PADDING),
-                    child: Text(S.of(context).history,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium
-                            ?.copyWith(color: AppColors.primary))),
-                Expanded(
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    physics: const BouncingScrollPhysics(),
-                    itemBuilder: (BuildContext context, int index) =>
-                        const ItemHistoryTransfer(),
-                    itemCount: 5,
-                  ),
-                )
               ],
             ),
           ),
@@ -162,5 +171,9 @@ class HomePageMobile extends StatelessWidget {
 
   void _onPressedScan(BuildContext context) {
     BaseNavigation.push(context, routeName: ManagerRoutes.scan);
+  }
+
+  void _onPressedSend(BuildContext context) {
+    BaseNavigation.push(context, routeName: ManagerRoutes.send);
   }
 }

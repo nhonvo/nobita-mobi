@@ -7,6 +7,9 @@ import 'package:nobita/pages/receive/page/receive_page.dart';
 import 'package:nobita/pages/receive/store/receive_store.dart';
 import 'package:nobita/pages/register/store/register_store.dart';
 import 'package:nobita/pages/scan/store/scan_store.dart';
+import 'package:nobita/pages/send/page/send_page.dart';
+import 'package:nobita/pages/send/store/send_store.dart';
+import 'package:nobita/pages/send/ticket/store/send_ticket_store.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:nobita/pages/app/store/app_store.dart';
@@ -30,7 +33,9 @@ class ManagerProvider {
     Provider<HomeStore>(create: (_) => HomeStore()),
     Provider<ProfileStore>(create: (_) => ProfileStore()),
     Provider<ReceiveStore>(create: (_) => ReceiveStore()),
-    Provider<ScanStore>(create: (_) => ScanStore())
+    Provider<ScanStore>(create: (_) => ScanStore()),
+    Provider<SendStore>(create: (_) => SendStore()),
+    Provider<SendTicketStore>(create: (_) => SendTicketStore()),
   ];
 
   /// ## Dispose
@@ -50,5 +55,7 @@ class ManagerProvider {
     context.read<ProfileStore>().resetValue();
     context.read<ReceiveStore>().resetValue();
     context.read<ScanStore>().resetValue();
+    context.read<SendStore>().resetValue();
+    context.read<SendTicketStore>().resetValue();
   }
 }

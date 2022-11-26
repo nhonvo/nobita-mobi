@@ -24,6 +24,38 @@ mixin _$LoginStore on _LoginStore, Store {
     });
   }
 
+  late final _$_isShowLoadingAtom =
+      Atom(name: '_LoginStore._isShowLoading', context: context);
+
+  @override
+  bool get _isShowLoading {
+    _$_isShowLoadingAtom.reportRead();
+    return super._isShowLoading;
+  }
+
+  @override
+  set _isShowLoading(bool value) {
+    _$_isShowLoadingAtom.reportWrite(value, super._isShowLoading, () {
+      super._isShowLoading = value;
+    });
+  }
+
+  late final _$_isValidAtom =
+      Atom(name: '_LoginStore._isValid', context: context);
+
+  @override
+  bool get _isValid {
+    _$_isValidAtom.reportRead();
+    return super._isValid;
+  }
+
+  @override
+  set _isValid(bool value) {
+    _$_isValidAtom.reportWrite(value, super._isValid, () {
+      super._isValid = value;
+    });
+  }
+
   late final _$onPressedLoginAsyncAction =
       AsyncAction('_LoginStore.onPressedLogin', context: context);
 
@@ -41,6 +73,17 @@ mixin _$LoginStore on _LoginStore, Store {
         name: '_LoginStore.onPressedCreateANewAccount');
     try {
       return super.onPressedCreateANewAccount(context);
+    } finally {
+      _$_LoginStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void validation() {
+    final _$actionInfo = _$_LoginStoreActionController.startAction(
+        name: '_LoginStore.validation');
+    try {
+      return super.validation();
     } finally {
       _$_LoginStoreActionController.endAction(_$actionInfo);
     }

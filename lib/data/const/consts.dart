@@ -15,4 +15,5 @@ class Consts {
       'https://cdn.dribbble.com/users/1771481/screenshots/15427066/media/ef898efac447ee102ecb6e1b9afef4a5.gif';
   static const MAIL_TO = 'mailto';
   static const BREARER = 'Bearer ';
+  static const CUREENTCY = 'VND';
 }

@@ -7,7 +7,7 @@ class Result {
   final bool? succeeded;
   final String? message;
   final dynamic resultObject;
-  final String? validationErrors;
+  final dynamic validationErrors;
   Result(
       {this.succeeded, this.message, this.resultObject, this.validationErrors});
 

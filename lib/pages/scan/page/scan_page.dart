@@ -12,6 +12,12 @@ class ScanPage extends BaseScreen {
 
 class _ScanPageState extends BaseScreenState<ScanPage, ScanStore> {
   @override
+  void reassemble() {
+    super.reassemble();
+    store.controller!.resumeCamera();
+  }
+
+  @override
   Widget buildSmallScreen(BuildContext context) {
     return ScanPageMobile(store: store);
   }

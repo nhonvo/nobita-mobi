@@ -16,7 +16,7 @@
     "hintEmail": "a@example.com",
     "hintFullName": "Nguyen Duc Hoa",
     "hintPhone": "039123456",
-    "accountNumber": "Số tài khoản: ",
+    "accountNumber": "Số tài khoản",
     "balance": "Số dư",
     "copied": "Đã sao chép",
     "languages": "Ngôn ngữ",
@@ -29,5 +29,15 @@
     "changePassword": "Đổi mật khẩu",
     "settings": "Cài đặt",
     "logout": "Đăng xuất",
-    "scan": "Quét"
+    "scan": "Quét",
+    "continueT": "Tiếp tục",
+    "description": "Mô tả",
+    "amount": "Số tiền",
+    "pleaseFillAllData": "Vui lòng điền tất cả dữ liệu",
+    "interNetUnavailable": "INTERNET KHÔNG KHẢ DỤNG",
+    "infoReceiver": "Thông tin người nhận",
+    "cancel": "Hủy",
+    "sended": "Đã gửi",
+    "close": "Đóng",
+    "wrongUserNameOrPassword": "Sai tài khoản hoặc mật khẩu"
 }

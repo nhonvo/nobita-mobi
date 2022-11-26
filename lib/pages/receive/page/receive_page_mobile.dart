@@ -60,7 +60,7 @@ class ReceivePageMobile extends StatelessWidget {
                     data: store.loginStore.user.accountNo ?? '',
                     version: QrVersions.auto,
                     size: 0.45.w(context),
-                    foregroundColor: Theme.of(context).highlightColor,
+                    foregroundColor: AppColors.white,
                   ),
                   const SizedBox(
                     height: Dimens.PADDING_LARGE,

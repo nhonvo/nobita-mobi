@@ -16,7 +16,7 @@
     "hintEmail": "a@example.com",
     "hintFullName": "Nguyen Duc Hoa",
     "hintPhone": "039123456",
-    "accountNumber": "Account number: ",
+    "accountNumber": "Account number",
     "balance": "Balance",
     "copied": "Copied",
     "languages": "Languages",
@@ -29,5 +29,15 @@
     "changePassword": "Change password",
     "settings": "Settings",
     "logout": "Logout",
-    "scan": "Scan"
+    "scan": "Scan",
+    "continueT": "Continue",
+    "description": "Description",
+    "amount": "Amount",
+    "pleaseFillAllData": "Please fill all data",
+    "interNetUnavailable": "INTERNET UNAVAILABLE",
+    "infoReceiver": "Info Receiver",
+    "cancel": "Cancel",
+    "sended": "Sended",
+    "close": "Close",
+    "wrongUserNameOrPassword": "Wrong User Name or Password"
 }

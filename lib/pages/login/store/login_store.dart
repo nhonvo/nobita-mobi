@@ -7,6 +7,7 @@ import 'package:nobita/data/const/consts.dart';
 import 'package:nobita/data/models/result.dart';
 import 'package:nobita/data/models/user.dart';
 import 'package:nobita/data/models/user_local.dart';
+import 'package:nobita/generated/l10n.dart';
 import 'package:nobita/manager/manager_address.dart';
 import 'package:nobita/manager/manager_key_storage.dart';
 import 'package:nobita/manager/manager_path_routes.dart';
@@ -22,6 +23,24 @@ abstract class _LoginStore with Store, BaseStoreMixin {
 
   @observable
   User user = User();
+
+  @observable
+  bool _isShowLoading = false;
+
+  bool get isShowLoading => _isShowLoading;
+
+  set isShowLoading(bool isShowLoading) {
+    _isShowLoading = isShowLoading;
+  }
+
+  @observable
+  bool _isValid = false;
+
+  bool get isValid => _isValid;
+
+  set isValid(bool isValid) {
+    _isValid = isValid;
+  }
 
   @override
   void onInit(BuildContext context) {
@@ -39,7 +58,11 @@ abstract class _LoginStore with Store, BaseStoreMixin {
   Future<void> onWidgetBuildDone(BuildContext context) async {}
 
   @override
-  void resetValue() {}
+  void resetValue() {
+    user = User();
+    userNameController.dispose();
+    passwordController.dispose();
+  }
 
   @action
   Future<void> onPressedLogin(BuildContext context) async {
@@ -57,31 +80,40 @@ abstract class _LoginStore with Store, BaseStoreMixin {
 
   Future<void> onLogin(BuildContext context,
       {required String username, required String password}) async {
-    await _baseAPI
-        .fetchData(ManagerAddress.login,
-            body: {'userName': username, 'password': password},
-            method: ApiMethod.POST)
-        .then((value) async {
-      switch (value.apiStatus) {
-        case ApiStatus.SUCCEEDED:
-          {
-            Result result = Result.fromJson(value.object);
-            await getInfo(context, token: result.resultObject);
-            return true;
-          }
-        case ApiStatus.INTERNET_UNAVAILABLE:
-          {
-            printLogYellow('INTERNET_UNAVAILABLE');
-            BaseUtils.showToast('INTERNET UNAVAILABLE', bgColor: Colors.red);
-            break;
-          }
-        default:
-          {
-            printLogError('FAILED');
-            break;
-          }
-      }
-    });
+    isShowLoading = true;
+    try {
+      await _baseAPI
+          .fetchData(ManagerAddress.login,
+              body: {'userName': username, 'password': password},
+              method: ApiMethod.POST)
+          .then((value) async {
+        switch (value.apiStatus) {
+          case ApiStatus.SUCCEEDED:
+            {
+              Result result = Result.fromJson(value.object);
+              if (result.succeeded == true)
+                await getInfo(context, token: result.resultObject);
+              else
+                BaseUtils.showToast(S.of(context).wrongUserNameOrPassword,
+                    bgColor: Theme.of(context).primaryColor);
+              return true;
+            }
+          case ApiStatus.INTERNET_UNAVAILABLE:
+            {
+              printLogYellow('INTERNET_UNAVAILABLE');
+              BaseUtils.showToast(S.of(context).interNetUnavailable,
+                  bgColor: Colors.red);
+              break;
+            }
+          default:
+            {
+              printLogError('FAILED');
+              break;
+            }
+        }
+      });
+    } catch (e) {}
+    isShowLoading = false;
   }
 
   @action
@@ -107,7 +139,8 @@ abstract class _LoginStore with Store, BaseStoreMixin {
         case ApiStatus.INTERNET_UNAVAILABLE:
           {
             printLogYellow('INTERNET_UNAVAILABLE');
-            BaseUtils.showToast('INTERNET UNAVAILABLE', bgColor: Colors.red);
+            BaseUtils.showToast(S.of(context).interNetUnavailable,
+                bgColor: Colors.red);
             break;
           }
         default:
@@ -120,19 +153,24 @@ abstract class _LoginStore with Store, BaseStoreMixin {
   }
 
   Future<bool> autoLogin(BuildContext context) async {
-    if (await BaseSharedPreferences.containKey(ManagerKeyStorage.user)) {
-      UserLocal userLocal = UserLocal.fromJson(jsonDecode(
-          await BaseSharedPreferences.getStringValue(ManagerKeyStorage.user)));
-      await onLogin(context,
-          username: userLocal.userName ?? '',
-          password: userLocal.password ?? '');
-      if (user.accountNo != null) {
-        BaseNavigation.push(context,
-            routeName: ManagerRoutes.home, clearStack: true);
-      }
-      return true;
-    } else
+    try {
+      if (await BaseSharedPreferences.containKey(ManagerKeyStorage.user)) {
+        UserLocal userLocal = UserLocal.fromJson(jsonDecode(
+            await BaseSharedPreferences.getStringValue(
+                ManagerKeyStorage.user)));
+        await onLogin(context,
+            username: userLocal.userName ?? '',
+            password: userLocal.password ?? '');
+        if (user.accountNo != null) {
+          BaseNavigation.push(context,
+              routeName: ManagerRoutes.home, clearStack: true);
+        }
+        return true;
+      } else
+        return false;
+    } catch (e) {
       return false;
+    }
   }
 
   Future<void> saveUserLocal(
@@ -149,6 +187,15 @@ abstract class _LoginStore with Store, BaseStoreMixin {
 
   void setPasswordUser(String pass) {
     user.password = pass;
+  }
+
+  @action
+  void validation() {
+    if (passwordController.text.isEmpty || userNameController.text.isEmpty) {
+      isValid = false;
+    } else {
+      isValid = true;
+    }
   }
 }
 
