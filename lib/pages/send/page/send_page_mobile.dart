@@ -79,7 +79,6 @@ class SendPageMobile extends StatelessWidget {
                   borderColor: Theme.of(context).dividerColor.withOpacity(0.2),
                   maxLines: 5,
                   title: S.of(context).description,
-                  keyboardType: TextInputType.number,
                   textEditingController: store.descriptionController,
                   onChanged: (v) {
                     store.isValid();
