@@ -67,7 +67,7 @@ class SendPageMobile extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 textEditingController: store.amountController,
                 onChanged: (v) {
-                  store.isValid();
+                  store.isValid(context);
                 },
               ),
               const SizedBox(height: Dimens.PADDING_MEDIUM),
@@ -81,7 +81,7 @@ class SendPageMobile extends StatelessWidget {
                   title: S.of(context).description,
                   textEditingController: store.descriptionController,
                   onChanged: (v) {
-                    store.isValid();
+                    store.isValid(context);
                   }),
               const SizedBox(height: Dimens.PADDING_XX_LARGE),
               Observer(builder: (_) {

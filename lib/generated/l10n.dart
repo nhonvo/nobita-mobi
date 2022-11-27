@@ -609,6 +609,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter the amount as a number`
+  String get pleaseEnterAmount {
+    return Intl.message(
+      'Please enter the amount as a number',
+      name: 'pleaseEnterAmount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

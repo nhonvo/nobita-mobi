@@ -54,5 +54,6 @@
     "change": "Đổi",
     "transferHistoryIsEmpty": "Không có lịch sử giao dịch",
     "confirm": "Xác nhận",
-    "confirmLogout": "Bạn có chắc bạn muốn"
+    "confirmLogout": "Bạn có chắc bạn muốn",
+    "pleaseEnterAmount": "Vui lòng nhập số tiền dưới dạng số"
 }

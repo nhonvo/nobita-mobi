@@ -77,11 +77,11 @@ mixin _$SendStore on _SendStore, Store {
       ActionController(name: '_SendStore', context: context);
 
   @override
-  void isValid() {
+  void isValid(BuildContext context) {
     final _$actionInfo =
         _$_SendStoreActionController.startAction(name: '_SendStore.isValid');
     try {
-      return super.isValid();
+      return super.isValid(context);
     } finally {
       _$_SendStoreActionController.endAction(_$actionInfo);
     }

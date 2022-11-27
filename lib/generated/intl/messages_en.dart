@@ -79,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneIsNotValid":
             MessageLookupByLibrary.simpleMessage("Phone is not valid"),
+        "pleaseEnterAmount": MessageLookupByLibrary.simpleMessage(
+            "Please enter the amount as a number"),
         "pleaseFillAllData":
             MessageLookupByLibrary.simpleMessage("Please fill all data"),
         "receive": MessageLookupByLibrary.simpleMessage("Receive"),

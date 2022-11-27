@@ -56,7 +56,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     _loginStore = context.read<LoginStore>();
     _scanStore = context.read<ScanStore>();
     _isSended = false;
-    isValid();
+    isValid(context);
   }
 
   @override
@@ -66,6 +66,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     emailController.dispose();
     amountController.dispose();
     descriptionController.dispose();
+    isValid(context);
   }
 
   @override
@@ -87,13 +88,12 @@ abstract class _SendStore with Store, BaseStoreMixin {
     emailController.clear();
     amountController.clear();
     descriptionController.clear();
-    isValid();
   }
 
   @action
   Future<void> getInfoById(BuildContext context) async {
     currentUser = User();
-    _setInfo();
+    _setInfo(context);
     await _baseAPI.fetchData(ManagerAddress.getInfoById,
         method: ApiMethod.POST,
         headers: {
@@ -110,7 +110,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
               Result result = Result.fromJson(value.object);
               User temp = User.fromJson(result.resultObject);
               currentUser = temp;
-              _setInfo();
+              _setInfo(context);
             } catch (e) {}
             return true;
           }
@@ -131,7 +131,16 @@ abstract class _SendStore with Store, BaseStoreMixin {
   }
 
   @action
-  void isValid() {
+  void isValid(BuildContext context) {
+    if (amountController.text.isNotEmpty) {
+      int? check = int.tryParse(amountController.text);
+      if (check == null) {
+        BaseUtils.showToast(S.of(context).pleaseEnterAmount,
+            bgColor: Theme.of(context).primaryColor);
+        isEnable = false;
+        return;
+      }
+    }
     if (accountNumberController.text.isEmpty ||
         fullNameController.text.isEmpty ||
         emailController.text.isEmpty ||
@@ -140,6 +149,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
       isEnable = false;
       return;
     }
+
     isEnable = true;
   }
 
@@ -152,10 +162,10 @@ abstract class _SendStore with Store, BaseStoreMixin {
           bgColor: Theme.of(context).primaryColor);
   }
 
-  void _setInfo() {
+  void _setInfo(BuildContext context) {
     fullNameController.text = currentUser.fullName ?? '';
     emailController.text = currentUser.email ?? '';
-    isValid();
+    isValid(context);
   }
 
   @action

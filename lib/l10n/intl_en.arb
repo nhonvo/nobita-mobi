@@ -54,5 +54,6 @@
     "change": "Change",
     "transferHistoryIsEmpty": "The transfer history is empty",
     "confirm": "Confirm",
-    "confirmLogout": "Are you sure you want to"
+    "confirmLogout": "Are you sure you want to",
+    "pleaseEnterAmount": "Please enter the amount as a number"
 }

@@ -79,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "phoneIsNotValid":
             MessageLookupByLibrary.simpleMessage("Sai định dạng số điện thoại"),
+        "pleaseEnterAmount": MessageLookupByLibrary.simpleMessage(
+            "Vui lòng nhập số tiền dưới dạng số"),
         "pleaseFillAllData": MessageLookupByLibrary.simpleMessage(
             "Vui lòng điền tất cả dữ liệu"),
         "receive": MessageLookupByLibrary.simpleMessage("Nhận"),
