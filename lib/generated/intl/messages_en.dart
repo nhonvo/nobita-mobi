@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is not valid"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password"),
+        "from": MessageLookupByLibrary.simpleMessage("From"),
         "fullname": MessageLookupByLibrary.simpleMessage("Fullname"),
         "hintEmail": MessageLookupByLibrary.simpleMessage("a@example.com"),
         "hintFullName": MessageLookupByLibrary.simpleMessage("Nguyen Duc Hoa"),
@@ -92,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "theNewPasswordSame": MessageLookupByLibrary.simpleMessage(
             "The new password is the same as the old password"),
         "themes": MessageLookupByLibrary.simpleMessage("Themes"),
+        "to": MessageLookupByLibrary.simpleMessage("To"),
         "transferHistoryIsEmpty": MessageLookupByLibrary.simpleMessage(
             "The transfer history is empty"),
         "updateInfo":

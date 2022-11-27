@@ -55,5 +55,7 @@
     "transferHistoryIsEmpty": "Không có lịch sử giao dịch",
     "confirm": "Xác nhận",
     "confirmLogout": "Bạn có chắc bạn muốn",
-    "pleaseEnterAmount": "Vui lòng nhập số tiền dưới dạng số"
+    "pleaseEnterAmount": "Vui lòng nhập số tiền dưới dạng số",
+    "from": "Từ",
+    "to": "Đến"
 }

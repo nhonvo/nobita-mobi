@@ -237,7 +237,7 @@ class HomePageMobile extends StatelessWidget {
                                   )
                                 ],
                               )
-                            : SizedBox.shrink();
+                            : const SizedBox.shrink();
                       }),
                       Observer(builder: (_) {
                         return store.isShowLoading

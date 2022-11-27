@@ -106,6 +106,7 @@ class ProfilePageMobile extends StatelessWidget {
 
   Future<void> _onPressedLogout(BuildContext context) async {
     confirmDialog(context,
+        textConfirm: S.of(context).logout,
         icon: Icons.logout,
         hightLight: ' ' + S.of(context).logout + '?',
         title: S.of(context).confirmLogout, onConfirm: () async {

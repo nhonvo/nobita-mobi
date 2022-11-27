@@ -51,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sai định dạng mail"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
+        "from": MessageLookupByLibrary.simpleMessage("Từ"),
         "fullname": MessageLookupByLibrary.simpleMessage("Họ tên"),
         "hintEmail": MessageLookupByLibrary.simpleMessage("a@example.com"),
         "hintFullName": MessageLookupByLibrary.simpleMessage("Nguyen Duc Hoa"),
@@ -92,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "theNewPasswordSame": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu mới giống với mật khẩu cũ"),
         "themes": MessageLookupByLibrary.simpleMessage("Giao diện"),
+        "to": MessageLookupByLibrary.simpleMessage("Đến"),
         "transferHistoryIsEmpty":
             MessageLookupByLibrary.simpleMessage("Không có lịch sử giao dịch"),
         "updateInfo": MessageLookupByLibrary.simpleMessage(

@@ -1,9 +1,11 @@
+import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:nobita/data/const/consts.dart';
 import 'package:nobita/data/models/history_transfer.dart';
 import 'package:nobita/generated/l10n.dart';
 import 'package:nobita/theme/colors.dart';
 import 'package:nobita/theme/dimens.dart';
+import 'package:nobita/theme/images.dart';
 
 class ItemHistoryTransfer extends StatelessWidget {
   final HistoryTransfer item;
@@ -24,27 +26,58 @@ class ItemHistoryTransfer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Text(
+                  myId == item.receiverId
+                      ? S.of(context).receive +
+                          ' ' +
+                          S.of(context).from +
+                          ' ' +
+                          (item.senderName ?? '')
+                      : S.of(context).send +
+                          ' ' +
+                          S.of(context).to +
+                          ' ' +
+                          (item.receiverName ?? ''),
+                  style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                      color: myId == item.receiverId
+                          ? AppColors.green_2
+                          : Theme.of(context).primaryColor),
+                ),
+              ),
+              BaseSVG(
+                  path: myId == item.receiverId
+                      ? Images.iconReceiveMoney
+                      : Images.iconSendMoney,
+                  color: myId == item.receiverId
+                      ? AppColors.green_2
+                      : Theme.of(context).primaryColor)
+            ],
+          ),
+          const SizedBox(height: Dimens.PADDING_LARGE),
           Text(
-            myId == item.receiverId
-                ? S.of(context).receive
-                : S.of(context).send,
-            style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                color: myId == item.receiverId
-                    ? AppColors.green_2
-                    : Theme.of(context).primaryColor),
+            S.of(context).amount,
+            style: Theme.of(context).textTheme.displaySmall,
           ),
-          const SizedBox(
-            height: Dimens.PADDING_SMALL,
-          ),
+          const SizedBox(height: Dimens.PADDING_SMALL),
           Text(
             item.amount.toString() + ' ' + Consts.CUREENTCY,
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           _buildSeparator(context),
           Text(
+            S.of(context).description,
+            style: Theme.of(context).textTheme.displaySmall,
+          ),
+          const SizedBox(height: Dimens.PADDING_SMALL),
+          Text(
             item.description.toString(),
             style: Theme.of(context).textTheme.displaySmall,
           ),
+          const SizedBox(height: Dimens.PADDING_LARGE),
           Text(
             convertTime(DateTime.parse(item.createdDate.toString())).toString(),
             style: Theme.of(context).textTheme.displaySmall,
