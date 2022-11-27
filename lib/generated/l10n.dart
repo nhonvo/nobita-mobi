@@ -499,6 +499,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Month`
+  String get month {
+    return Intl.message(
+      'Month',
+      name: 'month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change password successfully`
+  String get changePasswordSuccess {
+    return Intl.message(
+      'Change password successfully',
+      name: 'changePasswordSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Old password`
+  String get oldPassword {
+    return Intl.message(
+      'Old password',
+      name: 'oldPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New password`
+  String get newPassword {
+    return Intl.message(
+      'New password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change password failed`
+  String get changePasswordFailed {
+    return Intl.message(
+      'Change password failed',
+      name: 'changePasswordFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong old password`
+  String get wrongOldPassword {
+    return Intl.message(
+      'Wrong old password',
+      name: 'wrongOldPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The new password is the same as the old password`
+  String get theNewPasswordSame {
+    return Intl.message(
+      'The new password is the same as the old password',
+      name: 'theNewPasswordSame',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change`
+  String get change {
+    return Intl.message(
+      'Change',
+      name: 'change',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The transfer history is empty`
+  String get transferHistoryIsEmpty {
+    return Intl.message(
+      'The transfer history is empty',
+      name: 'transferHistoryIsEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to`
+  String get confirmLogout {
+    return Intl.message(
+      'Are you sure you want to',
+      name: 'confirmLogout',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

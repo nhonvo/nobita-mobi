@@ -110,6 +110,8 @@ abstract class _ScanStore with Store, BaseStoreMixin {
         BaseNavigation.push(context,
             routeName: ManagerRoutes.send,
             arguments: {'accountNumber': accountNumber});
+      } else {
+        controller?.resumeCamera();
       }
     });
   }

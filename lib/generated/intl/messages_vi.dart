@@ -29,8 +29,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_name": MessageLookupByLibrary.simpleMessage("Nô bi ta"),
         "balance": MessageLookupByLibrary.simpleMessage("Số dư"),
         "cancel": MessageLookupByLibrary.simpleMessage("Hủy"),
+        "change": MessageLookupByLibrary.simpleMessage("Đổi"),
         "changePassword": MessageLookupByLibrary.simpleMessage("Đổi mật khẩu"),
+        "changePasswordFailed":
+            MessageLookupByLibrary.simpleMessage("Đổi mật khẩu thất bại"),
+        "changePasswordSuccess":
+            MessageLookupByLibrary.simpleMessage("Đổi mật khẩu thành công"),
         "close": MessageLookupByLibrary.simpleMessage("Đóng"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Xác nhận"),
+        "confirmLogout":
+            MessageLookupByLibrary.simpleMessage("Bạn có chắc bạn muốn"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
         "continueT": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
@@ -61,6 +69,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "lixi": MessageLookupByLibrary.simpleMessage("Lixi"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
+        "month": MessageLookupByLibrary.simpleMessage("Tháng"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("Mật khẩu mới"),
+        "oldPassword": MessageLookupByLibrary.simpleMessage("Mật khẩu cũ"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordAndConfirmPasswordNotSame":
             MessageLookupByLibrary.simpleMessage(
@@ -76,10 +87,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "send": MessageLookupByLibrary.simpleMessage("Gửi"),
         "sended": MessageLookupByLibrary.simpleMessage("Đã gửi"),
         "settings": MessageLookupByLibrary.simpleMessage("Cài đặt"),
+        "theNewPasswordSame": MessageLookupByLibrary.simpleMessage(
+            "Mật khẩu mới giống với mật khẩu cũ"),
         "themes": MessageLookupByLibrary.simpleMessage("Giao diện"),
+        "transferHistoryIsEmpty":
+            MessageLookupByLibrary.simpleMessage("Không có lịch sử giao dịch"),
         "updateInfo": MessageLookupByLibrary.simpleMessage(
             "Cập nhật thông tin tài khoản"),
         "username": MessageLookupByLibrary.simpleMessage("Tài khoản"),
+        "wrongOldPassword":
+            MessageLookupByLibrary.simpleMessage("Mật khẩu cũ nhập sai"),
         "wrongUserNameOrPassword":
             MessageLookupByLibrary.simpleMessage("Sai tài khoản hoặc mật khẩu")
       };

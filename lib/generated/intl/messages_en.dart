@@ -29,9 +29,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_name": MessageLookupByLibrary.simpleMessage("nobita"),
         "balance": MessageLookupByLibrary.simpleMessage("Balance"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "change": MessageLookupByLibrary.simpleMessage("Change"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change password"),
+        "changePasswordFailed":
+            MessageLookupByLibrary.simpleMessage("Change password failed"),
+        "changePasswordSuccess": MessageLookupByLibrary.simpleMessage(
+            "Change password successfully"),
         "close": MessageLookupByLibrary.simpleMessage("Close"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "confirmLogout":
+            MessageLookupByLibrary.simpleMessage("Are you sure you want to"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "continueT": MessageLookupByLibrary.simpleMessage("Continue"),
@@ -61,6 +69,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "lixi": MessageLookupByLibrary.simpleMessage("Lixi"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "month": MessageLookupByLibrary.simpleMessage("Month"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New password"),
+        "oldPassword": MessageLookupByLibrary.simpleMessage("Old password"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordAndConfirmPasswordNotSame":
             MessageLookupByLibrary.simpleMessage(
@@ -76,10 +87,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "sended": MessageLookupByLibrary.simpleMessage("Sended"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "theNewPasswordSame": MessageLookupByLibrary.simpleMessage(
+            "The new password is the same as the old password"),
         "themes": MessageLookupByLibrary.simpleMessage("Themes"),
+        "transferHistoryIsEmpty": MessageLookupByLibrary.simpleMessage(
+            "The transfer history is empty"),
         "updateInfo":
             MessageLookupByLibrary.simpleMessage("Update account info"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
+        "wrongOldPassword":
+            MessageLookupByLibrary.simpleMessage("Wrong old password"),
         "wrongUserNameOrPassword":
             MessageLookupByLibrary.simpleMessage("Wrong User Name or Password")
       };

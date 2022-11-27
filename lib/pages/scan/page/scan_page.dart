@@ -14,7 +14,7 @@ class _ScanPageState extends BaseScreenState<ScanPage, ScanStore> {
   @override
   void reassemble() {
     super.reassemble();
-    store.controller!.resumeCamera();
+    store.controller?.resumeCamera();
   }
 
   @override

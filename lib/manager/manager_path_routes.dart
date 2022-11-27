@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nobita/pages/change_password/page/change_password_page.dart';
 import 'package:nobita/pages/home/page/home_page.dart';
 import 'package:nobita/pages/login/page/login_page.dart';
 import 'package:nobita/pages/profile/page/profile_page.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nobita/pages/change_password/store/change_password_store.dart';
 import 'package:nobita/pages/home/store/home_store.dart';
 import 'package:nobita/pages/login/store/login_store.dart';
 import 'package:nobita/pages/main/store/main_store.dart';
@@ -36,6 +37,7 @@ class ManagerProvider {
     Provider<ScanStore>(create: (_) => ScanStore()),
     Provider<SendStore>(create: (_) => SendStore()),
     Provider<SendTicketStore>(create: (_) => SendTicketStore()),
+    Provider<ChangePasswordStore>(create: (_) => ChangePasswordStore()),
   ];
 
   /// ## Dispose
@@ -57,5 +59,6 @@ class ManagerProvider {
     context.read<ScanStore>().resetValue();
     context.read<SendStore>().resetValue();
     context.read<SendTicketStore>().resetValue();
+    context.read<ChangePasswordStore>().resetValue();
   }
 }

@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:nobita/data/const/consts.dart';
+import 'package:nobita/data/models/history_transfer.dart';
 import 'package:nobita/generated/l10n.dart';
+import 'package:nobita/theme/colors.dart';
 import 'package:nobita/theme/dimens.dart';
 
 class ItemHistoryTransfer extends StatelessWidget {
-  const ItemHistoryTransfer({super.key});
+  final HistoryTransfer item;
+  final String myId;
+  const ItemHistoryTransfer(
+      {super.key, required this.item, required this.myId});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,17 +25,30 @@ class ItemHistoryTransfer extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            S.of(context).receive,
-            style: Theme.of(context).textTheme.headlineSmall,
+            myId == item.receiverId
+                ? S.of(context).receive
+                : S.of(context).send,
+            style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                color: myId == item.receiverId
+                    ? AppColors.green_2
+                    : Theme.of(context).primaryColor),
           ),
           const SizedBox(
             height: Dimens.PADDING_SMALL,
           ),
-          const Text(
-            '100.0\$',
+          Text(
+            item.amount.toString() + ' ' + Consts.CUREENTCY,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           _buildSeparator(context),
-          const Text('May 21 2021'),
+          Text(
+            item.description.toString(),
+            style: Theme.of(context).textTheme.displaySmall,
+          ),
+          Text(
+            convertTime(DateTime.parse(item.createdDate.toString())).toString(),
+            style: Theme.of(context).textTheme.displaySmall,
+          ),
         ],
       ),
     );
@@ -65,6 +84,14 @@ class ItemHistoryTransfer extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String convertTime(DateTime d) {
+    return d.day.toString() +
+        '/' +
+        d.month.toString() +
+        '/' +
+        d.year.toString();
   }
 }
 

@@ -43,5 +43,16 @@
     "emailIsNotValid": "Sai định dạng mail",
     "phoneIsNotValid": "Sai định dạng số điện thoại",
     "passwordAndConfirmPasswordNotSame": "Password and Confirm Password are not the same",
-    "accountAlreadyExists": "Tài khoản đã tồn tại"
+    "accountAlreadyExists": "Tài khoản đã tồn tại",
+    "month": "Tháng",
+    "changePasswordSuccess": "Đổi mật khẩu thành công",
+    "oldPassword": "Mật khẩu cũ",
+    "newPassword": "Mật khẩu mới",
+    "changePasswordFailed": "Đổi mật khẩu thất bại",
+    "wrongOldPassword": "Mật khẩu cũ nhập sai",
+    "theNewPasswordSame": "Mật khẩu mới giống với mật khẩu cũ",
+    "change": "Đổi",
+    "transferHistoryIsEmpty": "Không có lịch sử giao dịch",
+    "confirm": "Xác nhận",
+    "confirmLogout": "Bạn có chắc bạn muốn"
 }

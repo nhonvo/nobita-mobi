@@ -14,6 +14,7 @@ import 'package:nobita/widgets/buttons/btn_home_feature.dart';
 import 'package:nobita/widgets/others/custom_circle_avatar.dart';
 import 'package:nobita/widgets/others/item_history_transfer.dart';
 import 'package:nobita/widgets/others/profile_card.dart';
+import 'package:nobita/widgets/others/show_loading.dart';
 
 class HomePageMobile extends StatelessWidget {
   final HomeStore store;
@@ -142,20 +143,144 @@ class HomePageMobile extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                          padding: const EdgeInsets.all(Dimens.SCREEN_PADDING),
-                          child: Text(S.of(context).history,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineMedium
-                                  ?.copyWith(color: AppColors.primary))),
-                      ListView.builder(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemBuilder: (BuildContext context, int index) =>
-                            const ItemHistoryTransfer(),
-                        itemCount: 5,
-                      )
+                      Observer(builder: (_) {
+                        return (store.dropdownMonths.isNotEmpty &&
+                                store.dropdownYears.isNotEmpty &&
+                                store.selectedMonth != '' &&
+                                store.selectedYear != '')
+                            ? Row(
+                                children: [
+                                  Padding(
+                                      padding: const EdgeInsets.all(
+                                          Dimens.SCREEN_PADDING),
+                                      child: Text(S.of(context).history,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .headlineMedium
+                                              ?.copyWith(
+                                                  color: AppColors.primary))),
+                                  const Spacer(),
+                                  Text(
+                                    S.of(context).month + ' ',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall,
+                                  ),
+                                  Observer(builder: (_) {
+                                    return Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: Dimens.PADDING_SMALL),
+                                      decoration: BoxDecoration(
+                                          color: Theme.of(context)
+                                              .highlightColor
+                                              .withOpacity(0.2),
+                                          borderRadius: BorderRadius.circular(
+                                              Dimens.RADIUS_SMALL)),
+                                      child: DropdownButton(
+                                        alignment: Alignment.center,
+                                        borderRadius: BorderRadius.circular(
+                                            Dimens.RADIUS_MEDIUM),
+                                        value: store.selectedMonth,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .displayMedium,
+                                        onChanged: (String? newValue) async {
+                                          store.selectedMonth = newValue!;
+                                          await store.getTransferHistory
+                                              .call(context);
+                                        },
+                                        items: store.dropdownMonths,
+                                        isExpanded: false,
+                                        underline: const SizedBox.shrink(),
+                                        icon: const SizedBox.shrink(),
+                                      ),
+                                    );
+                                  }),
+                                  Text(
+                                    ':',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium,
+                                  ),
+                                  Observer(builder: (_) {
+                                    return Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: Dimens.PADDING_SMALL),
+                                      decoration: BoxDecoration(
+                                          color: Theme.of(context)
+                                              .highlightColor
+                                              .withOpacity(0.2),
+                                          borderRadius: BorderRadius.circular(
+                                              Dimens.RADIUS_SMALL)),
+                                      child: DropdownButton(
+                                        alignment: Alignment.center,
+                                        borderRadius: BorderRadius.circular(
+                                            Dimens.RADIUS_MEDIUM),
+                                        value: store.selectedYear,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .displayMedium,
+                                        onChanged: (String? newValue) async {
+                                          store.selectedYear = newValue!;
+                                          await store.getTransferHistory
+                                              .call(context);
+                                        },
+                                        items: store.dropdownYears,
+                                        isExpanded: false,
+                                        underline: const SizedBox.shrink(),
+                                        icon: const SizedBox.shrink(),
+                                      ),
+                                    );
+                                  }),
+                                  const SizedBox(
+                                    width: Dimens.SCREEN_PADDING,
+                                  )
+                                ],
+                              )
+                            : SizedBox.shrink();
+                      }),
+                      Observer(builder: (_) {
+                        return store.isShowLoading
+                            ? Center(
+                                child: Padding(
+                                  padding:
+                                      EdgeInsets.only(top: 0.15.w(context)),
+                                  child: BaseIndicator(
+                                    colorsIndicator: [
+                                      AppColors.blue,
+                                      Theme.of(context).primaryColor
+                                    ],
+                                  ),
+                                ),
+                              )
+                            : store.historyTransfers.length == 0
+                                ? Center(
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.only(top: 0.15.w(context)),
+                                      child: Text(
+                                          S.of(context).transferHistoryIsEmpty,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .displayMedium
+                                              ?.copyWith(
+                                                  color: Theme.of(context)
+                                                      .primaryColor)),
+                                    ),
+                                  )
+                                : ListView.builder(
+                                    shrinkWrap: true,
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    itemBuilder:
+                                        (BuildContext context, int index) =>
+                                            ItemHistoryTransfer(
+                                      item: store.historyTransfers[index],
+                                      myId: store.loginStore.user.id ?? '',
+                                    ),
+                                    itemCount: store.historyTransfers.length,
+                                  );
+                      })
                     ],
                   ),
                 ),

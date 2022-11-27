@@ -11,6 +11,7 @@ import 'package:nobita/theme/dimens.dart';
 import 'package:nobita/theme/images.dart';
 import 'package:nobita/widgets/buttons/btn_text_icon.dart';
 import 'package:nobita/widgets/buttons/swipe_languages.dart';
+import 'package:nobita/widgets/dialogs/confirm_dialog.dart';
 
 class ProfilePageMobile extends StatelessWidget {
   final ProfileStore store;
@@ -43,8 +44,14 @@ class ProfilePageMobile extends StatelessWidget {
                           .displaySmall
                           ?.copyWith(color: Theme.of(context).primaryColor)),
                   const SizedBox(height: Dimens.PADDING_LARGE),
-                  Text(S.of(context).changePassword,
-                      style: Theme.of(context).textTheme.displayMedium),
+                  GestureDetector(
+                    onTap: () {
+                      BaseNavigation.push(context,
+                          routeName: ManagerRoutes.changePassword);
+                    },
+                    child: Text(S.of(context).changePassword,
+                        style: Theme.of(context).textTheme.displayMedium),
+                  ),
                   const SizedBox(height: Dimens.PADDING_LARGE),
                   Text(S.of(context).settings,
                       style: Theme.of(context)
@@ -98,9 +105,14 @@ class ProfilePageMobile extends StatelessWidget {
   }
 
   Future<void> _onPressedLogout(BuildContext context) async {
-    await BaseSharedPreferences.remove(ManagerKeyStorage.user);
-    ManagerProvider.dispose(context);
-    BaseNavigation.push(context,
-        routeName: ManagerRoutes.login, clearStack: true);
+    confirmDialog(context,
+        icon: Icons.logout,
+        hightLight: ' ' + S.of(context).logout + '?',
+        title: S.of(context).confirmLogout, onConfirm: () async {
+      await BaseSharedPreferences.remove(ManagerKeyStorage.user);
+      ManagerProvider.dispose(context);
+      BaseNavigation.push(context,
+          routeName: ManagerRoutes.login, clearStack: true);
+    });
   }
 }

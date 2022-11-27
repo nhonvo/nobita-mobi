@@ -60,8 +60,8 @@ abstract class _LoginStore with Store, BaseStoreMixin {
   @override
   void resetValue() {
     user = User();
-    userNameController.dispose();
-    passwordController.dispose();
+    userNameController.clear();
+    passwordController.clear();
   }
 
   @action
@@ -162,6 +162,7 @@ abstract class _LoginStore with Store, BaseStoreMixin {
             username: userLocal.userName ?? '',
             password: userLocal.password ?? '');
         if (user.accountNo != null) {
+          user.password = userLocal.password;
           BaseNavigation.push(context,
               routeName: ManagerRoutes.home, clearStack: true);
         }
@@ -175,8 +176,6 @@ abstract class _LoginStore with Store, BaseStoreMixin {
 
   Future<void> saveUserLocal(
       {required String usernName, required String password}) async {
-    print('Print set');
-
     UserLocal temp = UserLocal(userName: usernName, password: password);
     if (await BaseSharedPreferences.containKey(ManagerKeyStorage.user)) {
       BaseSharedPreferences.remove(ManagerKeyStorage.user);

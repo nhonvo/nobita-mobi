@@ -38,23 +38,25 @@ class ProfileCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(S.of(context).balance,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(S.of(context).balance,
+                        style: Theme.of(context)
+                            .textTheme
+                            .displaySmall
+                            ?.copyWith(color: AppColors.white)),
+                    Text(
+                      balance,
                       style: Theme.of(context)
                           .textTheme
-                          .displaySmall
-                          ?.copyWith(color: AppColors.white)),
-                  Text(
-                    balance,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineLarge
-                        ?.copyWith(color: AppColors.white),
-                    maxLines: 1,
-                  ),
-                ],
+                          .headlineLarge
+                          ?.copyWith(color: AppColors.white),
+                      maxLines: 1,
+                    ),
+                  ],
+                ),
               ),
               QrImage(
                 data: accountNumber,
