@@ -85,7 +85,6 @@ class SendPageMobile extends StatelessWidget {
                     store.isValid();
                   }),
               const SizedBox(height: Dimens.PADDING_XX_LARGE),
-              const Spacer(),
               Observer(builder: (_) {
                 return BaseButton(
                     bgColor: store.isEnable

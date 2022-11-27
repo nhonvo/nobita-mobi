@@ -39,5 +39,9 @@
     "cancel": "Hủy",
     "sended": "Đã gửi",
     "close": "Đóng",
-    "wrongUserNameOrPassword": "Sai tài khoản hoặc mật khẩu"
+    "wrongUserNameOrPassword": "Sai tài khoản hoặc mật khẩu",
+    "emailIsNotValid": "Sai định dạng mail",
+    "phoneIsNotValid": "Sai định dạng số điện thoại",
+    "passwordAndConfirmPasswordNotSame": "Password and Confirm Password are not the same",
+    "accountAlreadyExists": "Tài khoản đã tồn tại"
 }

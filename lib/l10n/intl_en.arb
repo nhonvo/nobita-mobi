@@ -39,5 +39,9 @@
     "cancel": "Cancel",
     "sended": "Sended",
     "close": "Close",
-    "wrongUserNameOrPassword": "Wrong User Name or Password"
+    "wrongUserNameOrPassword": "Wrong User Name or Password",
+    "emailIsNotValid": "Email is not valid",
+    "phoneIsNotValid": "Phone is not valid",
+    "passwordAndConfirmPasswordNotSame": "Password and Confirm Password are not the same",
+    "accountAlreadyExists": "Account already exists"
 }

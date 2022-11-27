@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accountAlreadyExists":
+            MessageLookupByLibrary.simpleMessage("Tài khoản đã tồn tại"),
         "accountNumber": MessageLookupByLibrary.simpleMessage("Số tài khoản"),
         "amount": MessageLookupByLibrary.simpleMessage("Số tiền"),
         "app_name": MessageLookupByLibrary.simpleMessage("Nô bi ta"),
@@ -37,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tạo tài khoản mới"),
         "description": MessageLookupByLibrary.simpleMessage("Mô tả"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "emailIsNotValid":
+            MessageLookupByLibrary.simpleMessage("Sai định dạng mail"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
         "fullname": MessageLookupByLibrary.simpleMessage("Họ tên"),
@@ -58,7 +62,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
+        "passwordAndConfirmPasswordNotSame":
+            MessageLookupByLibrary.simpleMessage(
+                "Password and Confirm Password are not the same"),
         "phone": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
+        "phoneIsNotValid":
+            MessageLookupByLibrary.simpleMessage("Sai định dạng số điện thoại"),
         "pleaseFillAllData": MessageLookupByLibrary.simpleMessage(
             "Vui lòng điền tất cả dữ liệu"),
         "receive": MessageLookupByLibrary.simpleMessage("Nhận"),

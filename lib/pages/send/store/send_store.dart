@@ -70,12 +70,14 @@ abstract class _SendStore with Store, BaseStoreMixin {
 
   @override
   Future<void> onWidgetBuildDone(BuildContext context) async {
-    if (BaseNavigation.getArgs(context, key: 'accountNumber') != null) {
-      accountNumberController.text =
-          BaseNavigation.getArgs(context, key: 'accountNumber');
-      _scanStore.isNext = false;
-      await getInfoById(context);
-    }
+    try {
+      if (BaseNavigation.getArgs(context, key: 'accountNumber') != null) {
+        accountNumberController.text =
+            BaseNavigation.getArgs(context, key: 'accountNumber');
+        _scanStore.isNext = false;
+        await getInfoById(context);
+      }
+    } catch (e) {}
   }
 
   @override

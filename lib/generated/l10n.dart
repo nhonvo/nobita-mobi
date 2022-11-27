@@ -459,6 +459,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Email is not valid`
+  String get emailIsNotValid {
+    return Intl.message(
+      'Email is not valid',
+      name: 'emailIsNotValid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone is not valid`
+  String get phoneIsNotValid {
+    return Intl.message(
+      'Phone is not valid',
+      name: 'phoneIsNotValid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password and Confirm Password are not the same`
+  String get passwordAndConfirmPasswordNotSame {
+    return Intl.message(
+      'Password and Confirm Password are not the same',
+      name: 'passwordAndConfirmPasswordNotSame',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account already exists`
+  String get accountAlreadyExists {
+    return Intl.message(
+      'Account already exists',
+      name: 'accountAlreadyExists',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

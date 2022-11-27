@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accountAlreadyExists":
+            MessageLookupByLibrary.simpleMessage("Account already exists"),
         "accountNumber": MessageLookupByLibrary.simpleMessage("Account number"),
         "amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "app_name": MessageLookupByLibrary.simpleMessage("nobita"),
@@ -38,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "emailIsNotValid":
+            MessageLookupByLibrary.simpleMessage("Email is not valid"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password"),
         "fullname": MessageLookupByLibrary.simpleMessage("Fullname"),
@@ -58,7 +62,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordAndConfirmPasswordNotSame":
+            MessageLookupByLibrary.simpleMessage(
+                "Password and Confirm Password are not the same"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "phoneIsNotValid":
+            MessageLookupByLibrary.simpleMessage("Phone is not valid"),
         "pleaseFillAllData":
             MessageLookupByLibrary.simpleMessage("Please fill all data"),
         "receive": MessageLookupByLibrary.simpleMessage("Receive"),

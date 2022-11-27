@@ -89,12 +89,12 @@ abstract class _RegisterStore with Store, BaseStoreMixin {
             {
               result = Result.fromJson(value.object);
               if (result.succeeded != true)
-                BaseUtils.showToast(result.message, bgColor: Colors.red);
+                BaseUtils.showToast(S.of(context).accountAlreadyExists,
+                    bgColor: Colors.red);
               else {
-                print(result.message);
                 await loginStore.getInfo(context, token: result.resultObject);
-                _checkValid(context);
               }
+              _checkValid(context);
               break;
             }
           case ApiStatus.INTERNET_UNAVAILABLE:
@@ -132,18 +132,18 @@ abstract class _RegisterStore with Store, BaseStoreMixin {
       return false;
     }
     if (passwordController.text != confirmPasswordController.text) {
-      BaseUtils.showToast('Password and confirm password are not the same',
+      BaseUtils.showToast(S.of(context).passwordAndConfirmPasswordNotSame,
           bgColor: Theme.of(context).primaryColor);
       return false;
     }
     if (!BaseUtils.checkValidateEmail(context, emailController.text)) {
-      BaseUtils.showToast('Email is not valid',
+      BaseUtils.showToast(S.of(context).emailIsNotValid,
           bgColor: Theme.of(context).primaryColor);
       return false;
     }
 
     if (!checkValidatePhone(phoneController.text)) {
-      BaseUtils.showToast('Phone is not valid',
+      BaseUtils.showToast(S.of(context).phoneIsNotValid,
           bgColor: Theme.of(context).primaryColor);
       return false;
     }
