@@ -639,6 +639,286 @@ class S {
       args: [],
     );
   }
+
+  /// `This your account number. Please enter other account number`
+  String get thisYourAccount {
+    return Intl.message(
+      'This your account number. Please enter other account number',
+      name: 'thisYourAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed`
+  String get failed {
+    return Intl.message(
+      'Failed',
+      name: 'failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One`
+  String get one {
+    return Intl.message(
+      'One',
+      name: 'one',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Two`
+  String get two {
+    return Intl.message(
+      'Two',
+      name: 'two',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Three`
+  String get three {
+    return Intl.message(
+      'Three',
+      name: 'three',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Four`
+  String get four {
+    return Intl.message(
+      'Four',
+      name: 'four',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Five`
+  String get five {
+    return Intl.message(
+      'Five',
+      name: 'five',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Six`
+  String get six {
+    return Intl.message(
+      'Six',
+      name: 'six',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seven`
+  String get seven {
+    return Intl.message(
+      'Seven',
+      name: 'seven',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eight`
+  String get eight {
+    return Intl.message(
+      'Eight',
+      name: 'eight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nine`
+  String get nine {
+    return Intl.message(
+      'Nine',
+      name: 'nine',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ten`
+  String get ten {
+    return Intl.message(
+      'Ten',
+      name: 'ten',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mươi`
+  String get muoi {
+    return Intl.message(
+      'Mươi',
+      name: 'muoi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `oh`
+  String get oh {
+    return Intl.message(
+      'oh',
+      name: 'oh',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `dozen`
+  String get dozen {
+    return Intl.message(
+      'dozen',
+      name: 'dozen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `unit`
+  String get unit {
+    return Intl.message(
+      'unit',
+      name: 'unit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `hundred`
+  String get hundred {
+    return Intl.message(
+      'hundred',
+      name: 'hundred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `thousand`
+  String get thousand {
+    return Intl.message(
+      'thousand',
+      name: 'thousand',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `million`
+  String get million {
+    return Intl.message(
+      'million',
+      name: 'million',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `billion`
+  String get billion {
+    return Intl.message(
+      'billion',
+      name: 'billion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Twenty`
+  String get twenty {
+    return Intl.message(
+      'Twenty',
+      name: 'twenty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thirty`
+  String get thirty {
+    return Intl.message(
+      'Thirty',
+      name: 'thirty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forty`
+  String get forty {
+    return Intl.message(
+      'Forty',
+      name: 'forty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fifty`
+  String get fifty {
+    return Intl.message(
+      'Fifty',
+      name: 'fifty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sixties`
+  String get sixties {
+    return Intl.message(
+      'Sixties',
+      name: 'sixties',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seventies`
+  String get seventies {
+    return Intl.message(
+      'Seventies',
+      name: 'seventies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eighty`
+  String get eighty {
+    return Intl.message(
+      'Eighty',
+      name: 'eighty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ninety`
+  String get ninety {
+    return Intl.message(
+      'Ninety',
+      name: 'ninety',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

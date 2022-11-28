@@ -5,6 +5,7 @@ import 'package:nobita/data/const/consts.dart';
 import 'package:nobita/generated/l10n.dart';
 import 'package:nobita/pages/send/store/send_store.dart';
 import 'package:nobita/theme/dimens.dart';
+import 'package:nobita/utils/helper.dart';
 import 'package:nobita/widgets/headers/std_appbar.dart';
 import 'package:nobita/widgets/inputs/custom_text_field.dart';
 
@@ -38,7 +39,7 @@ class SendPageMobile extends StatelessWidget {
                   }),
               const SizedBox(height: Dimens.PADDING_MEDIUM),
               CustomTextField(
-                  bgColor: Theme.of(context).backgroundColor,
+                  bgColor: Theme.of(context).dividerColor.withOpacity(0.1),
                   cusorColor: Theme.of(context).highlightColor,
                   isEditMode: false,
                   style: Theme.of(context).textTheme.displaySmall,
@@ -48,7 +49,7 @@ class SendPageMobile extends StatelessWidget {
                   textEditingController: store.fullNameController),
               const SizedBox(height: Dimens.PADDING_MEDIUM),
               CustomTextField(
-                  bgColor: Theme.of(context).backgroundColor,
+                  bgColor: Theme.of(context).dividerColor.withOpacity(0.1),
                   cusorColor: Theme.of(context).highlightColor,
                   isEditMode: false,
                   style: Theme.of(context).textTheme.displaySmall,
@@ -67,9 +68,19 @@ class SendPageMobile extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 textEditingController: store.amountController,
                 onChanged: (v) {
+                  store.amount = int.tryParse(v.text.toString()) ?? 0;
+                  print(store.amount);
                   store.isValid(context);
                 },
               ),
+              const SizedBox(height: Dimens.PADDING_SMALL),
+              Observer(
+                  builder: (_) => (store.amount != 0)
+                      ? Text(
+                          Helper.callNumber(context,
+                              number: int.parse(store.amount.toString())),
+                          style: Theme.of(context).textTheme.displaySmall)
+                      : const SizedBox.shrink()),
               const SizedBox(height: Dimens.PADDING_MEDIUM),
               CustomTextField(
                   bgColor: Theme.of(context).backgroundColor,

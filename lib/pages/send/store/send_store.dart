@@ -46,6 +46,15 @@ abstract class _SendStore with Store, BaseStoreMixin {
     _isSended = isSended;
   }
 
+  @observable
+  int _amount = 0;
+
+  int get amount => _amount;
+
+  set amount(int amount) {
+    _amount = amount;
+  }
+
   @override
   void onInit(BuildContext context) {
     accountNumberController = TextEditingController();
@@ -56,6 +65,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     _loginStore = context.read<LoginStore>();
     _scanStore = context.read<ScanStore>();
     _isSended = false;
+    amount = 0;
     isValid(context);
   }
 
@@ -66,6 +76,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     emailController.dispose();
     amountController.dispose();
     descriptionController.dispose();
+    amount = 0;
     isValid(context);
   }
 
@@ -88,6 +99,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     emailController.clear();
     amountController.clear();
     descriptionController.clear();
+    amount = 0;
   }
 
   @action
@@ -150,16 +162,32 @@ abstract class _SendStore with Store, BaseStoreMixin {
       return;
     }
 
+    if (accountNumberController.text == _loginStore.user.accountNo) {
+      BaseUtils.showToast(S.of(context).thisYourAccount,
+          bgColor: Theme.of(context).primaryColor);
+      isEnable = false;
+      return;
+    }
     isEnable = true;
   }
 
   @action
   void onPressedNext(BuildContext context) {
-    if (isEnable) {
-      BaseNavigation.push(context, routeName: ManagerRoutes.sendTicket);
-    } else
-      BaseUtils.showToast(S.of(context).pleaseFillAllData,
-          bgColor: Theme.of(context).primaryColor);
+    try {
+      if (isEnable) {
+        BaseNavigation.push(context, routeName: ManagerRoutes.sendTicket);
+      } else if (accountNumberController.text.isEmpty ||
+          fullNameController.text.isEmpty ||
+          emailController.text.isEmpty ||
+          amountController.text.isEmpty ||
+          descriptionController.text.isEmpty)
+        BaseUtils.showToast(S.of(context).pleaseFillAllData,
+            bgColor: Theme.of(context).primaryColor);
+      else if (accountNumberController.text == _loginStore.user.accountNo) {
+        BaseUtils.showToast(S.of(context).thisYourAccount,
+            bgColor: Theme.of(context).primaryColor);
+      }
+    } catch (e) {}
   }
 
   void _setInfo(BuildContext context) {
@@ -183,7 +211,12 @@ abstract class _SendStore with Store, BaseStoreMixin {
           {
             try {
               Result result = Result.fromJson(value.object);
-              if (result.succeeded == true) isSended = true;
+              if (result.succeeded == true)
+                isSended = true;
+              else {
+                BaseUtils.showToast(S.of(context).failed,
+                    bgColor: Theme.of(context).primaryColor);
+              }
             } catch (e) {}
             return true;
           }

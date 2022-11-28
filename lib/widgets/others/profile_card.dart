@@ -73,7 +73,7 @@ class ProfileCard extends StatelessWidget {
             onTap: () {
               BaseUtils.copy(
                 context,
-                content: '',
+                content: accountNumber,
                 text: S.of(context).copied,
                 bgColor: Theme.of(context).primaryColor,
               );

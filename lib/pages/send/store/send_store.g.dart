@@ -57,6 +57,21 @@ mixin _$SendStore on _SendStore, Store {
     });
   }
 
+  late final _$_amountAtom = Atom(name: '_SendStore._amount', context: context);
+
+  @override
+  int get _amount {
+    _$_amountAtom.reportRead();
+    return super._amount;
+  }
+
+  @override
+  set _amount(int value) {
+    _$_amountAtom.reportWrite(value, super._amount, () {
+      super._amount = value;
+    });
+  }
+
   late final _$getInfoByIdAsyncAction =
       AsyncAction('_SendStore.getInfoById', context: context);
 

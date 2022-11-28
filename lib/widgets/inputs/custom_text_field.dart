@@ -7,14 +7,14 @@ import 'package:nobita/theme/text_styles.dart';
 
 class CustomTextField extends StatelessWidget {
   final double? height;
-  final bool isModePassword, autofocus, isModeBorder, isEditMode, isShowBG;
+  final bool isModePassword, autofocus, isModeBorder, isEditMode, isNotShowBG;
   final String? initialValue, hintText;
   final Function(TextEditingController)? onChanged;
   final Function(TextEditingController)? onSubmitted;
   final TextEditingController? textEditingController;
   final String obscuringCharacter;
   final TextStyle? style;
-  final Color bgColor, borderColor, cusorColor;
+  final Color? bgColor, borderColor, cusorColor;
   final Widget? prefixIcon;
   final int? maxLines, maxLength;
   final TextInputType? keyboardType;
@@ -31,7 +31,7 @@ class CustomTextField extends StatelessWidget {
       this.onSubmitted,
       this.textEditingController,
       this.obscuringCharacter = '•',
-      required this.bgColor,
+      this.bgColor,
       this.prefixIcon,
       this.maxLines,
       this.keyboardType,
@@ -42,7 +42,7 @@ class CustomTextField extends StatelessWidget {
       this.formatterList = const [],
       this.maxLength,
       this.borderColor = AppColors.transparent,
-      this.isShowBG = false,
+      this.isNotShowBG = false,
       required this.isEditMode,
       required this.cusorColor,
       this.title})
@@ -67,20 +67,11 @@ class CustomTextField extends StatelessWidget {
             ])),
         Container(
           decoration: BoxDecoration(
-              color: !isShowBG
-                  ? AppColors.transparent
-                  : isEditMode
-                      ? Theme.of(context).dividerColor.withOpacity(0.35)
-                      : AppColors.transparent,
+              color: bgColor ?? AppColors.transparent,
               borderRadius: BorderRadius.circular(8)),
           child: Container(
             decoration: BoxDecoration(
-                color: !isShowBG
-                    ? AppColors.transparent
-                    : isEditMode
-                        ? bgColor.withOpacity(0.8)
-                        : AppColors.transparent,
-                border: Border.all(color: borderColor),
+                border: Border.all(color: borderColor ?? AppColors.transparent),
                 borderRadius: BorderRadius.circular(8)),
             width: 1.0.w(context),
             constraints: const BoxConstraints(

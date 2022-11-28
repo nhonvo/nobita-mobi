@@ -58,14 +58,20 @@ class ItemHistoryTransfer extends StatelessWidget {
             ],
           ),
           const SizedBox(height: Dimens.PADDING_LARGE),
-          Text(
-            S.of(context).amount,
-            style: Theme.of(context).textTheme.displaySmall,
-          ),
-          const SizedBox(height: Dimens.PADDING_SMALL),
-          Text(
-            item.amount.toString() + ' ' + Consts.CUREENTCY,
-            style: Theme.of(context).textTheme.headlineSmall,
+          Row(
+            children: [
+              Text(
+                S.of(context).amount,
+                style: Theme.of(context).textTheme.displaySmall,
+              ),
+              const SizedBox(width: Dimens.PADDING_MEDIUM),
+              Expanded(
+                child: Text(
+                  item.amount.toString() + ' ' + Consts.CUREENTCY,
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+              ),
+            ],
           ),
           _buildSeparator(context),
           Text(
@@ -75,12 +81,13 @@ class ItemHistoryTransfer extends StatelessWidget {
           const SizedBox(height: Dimens.PADDING_SMALL),
           Text(
             item.description.toString(),
-            style: Theme.of(context).textTheme.displaySmall,
+            style: Theme.of(context).textTheme.displayLarge,
           ),
-          const SizedBox(height: Dimens.PADDING_LARGE),
+          const SizedBox(height: Dimens.PADDING_MEDIUM),
           Text(
             convertTime(DateTime.parse(item.createdDate.toString())).toString(),
-            style: Theme.of(context).textTheme.displaySmall,
+            style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                color: Theme.of(context).highlightColor.withOpacity(0.5)),
           ),
         ],
       ),

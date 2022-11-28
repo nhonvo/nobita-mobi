@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "app_name": MessageLookupByLibrary.simpleMessage("nobita"),
         "balance": MessageLookupByLibrary.simpleMessage("Balance"),
+        "billion": MessageLookupByLibrary.simpleMessage("billion"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "change": MessageLookupByLibrary.simpleMessage("Change"),
         "changePassword":
@@ -47,11 +48,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "dozen": MessageLookupByLibrary.simpleMessage("dozen"),
+        "eight": MessageLookupByLibrary.simpleMessage("Eight"),
+        "eighty": MessageLookupByLibrary.simpleMessage("Eighty"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailIsNotValid":
             MessageLookupByLibrary.simpleMessage("Email is not valid"),
+        "failed": MessageLookupByLibrary.simpleMessage("Failed"),
+        "fifty": MessageLookupByLibrary.simpleMessage("Fifty"),
+        "five": MessageLookupByLibrary.simpleMessage("Five"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password"),
+        "forty": MessageLookupByLibrary.simpleMessage("Forty"),
+        "four": MessageLookupByLibrary.simpleMessage("Four"),
         "from": MessageLookupByLibrary.simpleMessage("From"),
         "fullname": MessageLookupByLibrary.simpleMessage("Fullname"),
         "hintEmail": MessageLookupByLibrary.simpleMessage("a@example.com"),
@@ -61,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintUserName":
             MessageLookupByLibrary.simpleMessage("hdback_hackathon"),
         "history": MessageLookupByLibrary.simpleMessage("History"),
+        "hundred": MessageLookupByLibrary.simpleMessage("hundred"),
         "iHaveAccount":
             MessageLookupByLibrary.simpleMessage("I have a account"),
         "infoReceiver": MessageLookupByLibrary.simpleMessage("Info Receiver"),
@@ -70,9 +80,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "lixi": MessageLookupByLibrary.simpleMessage("Lixi"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "million": MessageLookupByLibrary.simpleMessage("million"),
         "month": MessageLookupByLibrary.simpleMessage("Month"),
+        "muoi": MessageLookupByLibrary.simpleMessage("Mươi"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New password"),
+        "nine": MessageLookupByLibrary.simpleMessage("Nine"),
+        "ninety": MessageLookupByLibrary.simpleMessage("Ninety"),
+        "oh": MessageLookupByLibrary.simpleMessage("oh"),
         "oldPassword": MessageLookupByLibrary.simpleMessage("Old password"),
+        "one": MessageLookupByLibrary.simpleMessage("One"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordAndConfirmPasswordNotSame":
             MessageLookupByLibrary.simpleMessage(
@@ -90,12 +106,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "sended": MessageLookupByLibrary.simpleMessage("Sended"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "seven": MessageLookupByLibrary.simpleMessage("Seven"),
+        "seventies": MessageLookupByLibrary.simpleMessage("Seventies"),
+        "six": MessageLookupByLibrary.simpleMessage("Six"),
+        "sixties": MessageLookupByLibrary.simpleMessage("Sixties"),
+        "ten": MessageLookupByLibrary.simpleMessage("Ten"),
         "theNewPasswordSame": MessageLookupByLibrary.simpleMessage(
             "The new password is the same as the old password"),
         "themes": MessageLookupByLibrary.simpleMessage("Themes"),
+        "thirty": MessageLookupByLibrary.simpleMessage("Thirty"),
+        "thisYourAccount": MessageLookupByLibrary.simpleMessage(
+            "This your account number. Please enter other account number"),
+        "thousand": MessageLookupByLibrary.simpleMessage("thousand"),
+        "three": MessageLookupByLibrary.simpleMessage("Three"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
         "transferHistoryIsEmpty": MessageLookupByLibrary.simpleMessage(
             "The transfer history is empty"),
+        "twenty": MessageLookupByLibrary.simpleMessage("Twenty"),
+        "two": MessageLookupByLibrary.simpleMessage("Two"),
+        "unit": MessageLookupByLibrary.simpleMessage("unit"),
         "updateInfo":
             MessageLookupByLibrary.simpleMessage("Update account info"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),

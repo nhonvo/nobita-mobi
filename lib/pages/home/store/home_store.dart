@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';

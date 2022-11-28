@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("Số tiền"),
         "app_name": MessageLookupByLibrary.simpleMessage("Nô bi ta"),
         "balance": MessageLookupByLibrary.simpleMessage("Số dư"),
+        "billion": MessageLookupByLibrary.simpleMessage("tỉ"),
         "cancel": MessageLookupByLibrary.simpleMessage("Hủy"),
         "change": MessageLookupByLibrary.simpleMessage("Đổi"),
         "changePassword": MessageLookupByLibrary.simpleMessage("Đổi mật khẩu"),
@@ -46,11 +47,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Tạo tài khoản mới"),
         "description": MessageLookupByLibrary.simpleMessage("Mô tả"),
+        "dozen": MessageLookupByLibrary.simpleMessage("chục"),
+        "eight": MessageLookupByLibrary.simpleMessage("Tám"),
+        "eighty": MessageLookupByLibrary.simpleMessage("Eighty"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailIsNotValid":
             MessageLookupByLibrary.simpleMessage("Sai định dạng mail"),
+        "failed": MessageLookupByLibrary.simpleMessage("Failed"),
+        "fifty": MessageLookupByLibrary.simpleMessage("Fifty"),
+        "five": MessageLookupByLibrary.simpleMessage("Năm"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
+        "forty": MessageLookupByLibrary.simpleMessage("Forty"),
+        "four": MessageLookupByLibrary.simpleMessage("Bốn"),
         "from": MessageLookupByLibrary.simpleMessage("Từ"),
         "fullname": MessageLookupByLibrary.simpleMessage("Họ tên"),
         "hintEmail": MessageLookupByLibrary.simpleMessage("a@example.com"),
@@ -60,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hintUserName":
             MessageLookupByLibrary.simpleMessage("hdback_hackathon"),
         "history": MessageLookupByLibrary.simpleMessage("Lịch sử"),
+        "hundred": MessageLookupByLibrary.simpleMessage("trăm"),
         "iHaveAccount":
             MessageLookupByLibrary.simpleMessage("Tôi đã có tài khoản"),
         "infoReceiver":
@@ -70,9 +80,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "lixi": MessageLookupByLibrary.simpleMessage("Lixi"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
+        "million": MessageLookupByLibrary.simpleMessage("triệu"),
         "month": MessageLookupByLibrary.simpleMessage("Tháng"),
+        "muoi": MessageLookupByLibrary.simpleMessage("Mươi"),
         "newPassword": MessageLookupByLibrary.simpleMessage("Mật khẩu mới"),
+        "nine": MessageLookupByLibrary.simpleMessage("Chín"),
+        "ninety": MessageLookupByLibrary.simpleMessage("Ninety"),
+        "oh": MessageLookupByLibrary.simpleMessage("không"),
         "oldPassword": MessageLookupByLibrary.simpleMessage("Mật khẩu cũ"),
+        "one": MessageLookupByLibrary.simpleMessage("Một"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordAndConfirmPasswordNotSame":
             MessageLookupByLibrary.simpleMessage(
@@ -90,12 +106,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "send": MessageLookupByLibrary.simpleMessage("Gửi"),
         "sended": MessageLookupByLibrary.simpleMessage("Đã gửi"),
         "settings": MessageLookupByLibrary.simpleMessage("Cài đặt"),
+        "seven": MessageLookupByLibrary.simpleMessage("Bảy"),
+        "seventies": MessageLookupByLibrary.simpleMessage("Seventies"),
+        "six": MessageLookupByLibrary.simpleMessage("Sáu"),
+        "sixties": MessageLookupByLibrary.simpleMessage("Sixties"),
+        "ten": MessageLookupByLibrary.simpleMessage("Mười"),
         "theNewPasswordSame": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu mới giống với mật khẩu cũ"),
         "themes": MessageLookupByLibrary.simpleMessage("Giao diện"),
+        "thirty": MessageLookupByLibrary.simpleMessage("Thirty"),
+        "thisYourAccount": MessageLookupByLibrary.simpleMessage(
+            "Đây là số tài khoản của bạn. Vui lòng nhập số tài khoản khác"),
+        "thousand": MessageLookupByLibrary.simpleMessage("nghìn"),
+        "three": MessageLookupByLibrary.simpleMessage("Ba"),
         "to": MessageLookupByLibrary.simpleMessage("Đến"),
         "transferHistoryIsEmpty":
             MessageLookupByLibrary.simpleMessage("Không có lịch sử giao dịch"),
+        "twenty": MessageLookupByLibrary.simpleMessage("Twenty"),
+        "two": MessageLookupByLibrary.simpleMessage("Hai"),
+        "unit": MessageLookupByLibrary.simpleMessage("đơn vị"),
         "updateInfo": MessageLookupByLibrary.simpleMessage(
             "Cập nhật thông tin tài khoản"),
         "username": MessageLookupByLibrary.simpleMessage("Tài khoản"),
