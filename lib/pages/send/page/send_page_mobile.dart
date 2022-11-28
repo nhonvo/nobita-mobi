@@ -127,7 +127,6 @@ class SendPageMobile extends StatelessWidget {
                     textEditingController: store.amountController,
                     onChanged: (v) {
                       store.amount = int.tryParse(v.text.toString()) ?? 0;
-                      print(store.amount);
                       store.isValid(context);
                     },
                   ),

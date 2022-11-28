@@ -6,6 +6,7 @@ import 'package:nobita/theme/dimens.dart';
 import 'package:nobita/theme/images.dart';
 import 'package:nobita/theme/shadows.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:intl/intl.dart' as intl;
 
 class ProfileCard extends StatelessWidget {
   final String accountNumber;
@@ -48,7 +49,14 @@ class ProfileCard extends StatelessWidget {
                             .displaySmall
                             ?.copyWith(color: AppColors.white)),
                     Text(
-                      balance,
+                      intl.NumberFormat.decimalPattern().format(int.tryParse(
+                              balance.substring(
+                                  0,
+                                  (balance.length > 3)
+                                      ? balance.length - 3
+                                      : 0)) ??
+                          0),
+                      overflow: TextOverflow.ellipsis,
                       style: Theme.of(context)
                           .textTheme
                           .headlineLarge

@@ -6,6 +6,7 @@ import 'package:nobita/generated/l10n.dart';
 import 'package:nobita/theme/colors.dart';
 import 'package:nobita/theme/dimens.dart';
 import 'package:nobita/theme/images.dart';
+import 'package:intl/intl.dart' as intl;
 
 class ItemHistoryTransfer extends StatelessWidget {
   final HistoryTransfer item;
@@ -67,7 +68,10 @@ class ItemHistoryTransfer extends StatelessWidget {
               const SizedBox(width: Dimens.PADDING_MEDIUM),
               Expanded(
                 child: Text(
-                  item.amount.toString() + ' ' + Consts.CUREENTCY,
+                  intl.NumberFormat.decimalPattern()
+                          .format(int.tryParse(item.amount.toString()) ?? 0) +
+                      ' ' +
+                      Consts.CUREENTCY,
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),

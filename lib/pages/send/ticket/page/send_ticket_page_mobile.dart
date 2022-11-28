@@ -9,6 +9,7 @@ import 'package:nobita/theme/colors.dart';
 import 'package:nobita/theme/shadows.dart';
 import 'package:nobita/widgets/others/item_history_transfer.dart';
 import 'package:nobita/widgets/others/show_loading.dart';
+import 'package:intl/intl.dart' as intl;
 
 import '../../../../theme/dimens.dart';
 
@@ -143,7 +144,9 @@ class SendTicketPageMobile extends StatelessWidget {
                               height: Dimens.PADDING_SMALL,
                             ),
                             Text(
-                                store.sendStore.amountController.text +
+                                intl.NumberFormat.decimalPattern().format(
+                                        int.parse(store
+                                            .sendStore.amountController.text)) +
                                     ' ' +
                                     Consts.CUREENTCY,
                                 style: Theme.of(context)

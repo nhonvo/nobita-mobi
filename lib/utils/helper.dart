@@ -11,7 +11,6 @@ class Helper {
     while (number > 0) {
       int numLen = number.toString().length;
       int num = number ~/ pow(10, numLen - 1);
-      print(num);
       result = result +
           ' ' +
           _callNumber(context, number: num) +
@@ -20,7 +19,6 @@ class Helper {
       if (S.of(context).app_name == 'nobita' && numLen > 1)
         result = result + ' and';
       number = (number % pow(10, numLen - 1)).toInt();
-      print(number);
     }
     return result
         .replaceAll(
@@ -67,8 +65,6 @@ class Helper {
 
   static String _callUnit(BuildContext context,
       {required int digits, required int number}) {
-    print(digits);
-
     switch (digits) {
       case 1:
         return S.of(context).unit;
