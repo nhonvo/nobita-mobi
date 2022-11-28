@@ -54,7 +54,7 @@
     "change": "Change",
     "transferHistoryIsEmpty": "The transfer history is empty",
     "confirm": "Confirm",
-    "confirmLogout": "Are you sure you want to",
+    "confirmAreYou": "Are you sure you want to",
     "pleaseEnterAmount": "Please enter the amount as a number",
     "from": "From",
     "to": "To",
@@ -85,5 +85,11 @@
     "sixties": "Sixties",
     "seventies": "Seventies",
     "eighty": "Eighty",
-    "ninety": "Ninety"
+    "ninety": "Ninety",
+    "saveRecipient": "Save recipient",
+    "addContactSuccessfully": "Save recipient successfully",
+    "addContactFailed": "Save recipient failed",
+    "successfully": "Successfully",
+    "delete": "Delete",
+    "deleteContactFailed": "Delete contact failed"
 }

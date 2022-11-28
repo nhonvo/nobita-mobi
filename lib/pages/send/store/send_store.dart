@@ -55,6 +55,18 @@ abstract class _SendStore with Store, BaseStoreMixin {
     _amount = amount;
   }
 
+  @observable
+  bool _isSaveRecipient = false;
+
+  bool get isSaveRecipient => _isSaveRecipient;
+
+  set isSaveRecipient(bool isSaveRecipient) {
+    _isSaveRecipient = isSaveRecipient;
+  }
+
+  @observable
+  ObservableList<User> contacts = ObservableList<User>();
+
   @override
   void onInit(BuildContext context) {
     accountNumberController = TextEditingController();
@@ -88,8 +100,10 @@ abstract class _SendStore with Store, BaseStoreMixin {
             BaseNavigation.getArgs(context, key: 'accountNumber');
         _scanStore.isNext = false;
         await getInfoById(context);
-      }
-    } catch (e) {}
+      } else {}
+    } catch (e) {
+      await getContacts(context);
+    }
   }
 
   @override
@@ -211,10 +225,127 @@ abstract class _SendStore with Store, BaseStoreMixin {
           {
             try {
               Result result = Result.fromJson(value.object);
-              if (result.succeeded == true)
+              if (result.succeeded == true) {
                 isSended = true;
-              else {
+                if (isSaveRecipient) addContact(context);
+              } else {
                 BaseUtils.showToast(S.of(context).failed,
+                    bgColor: Theme.of(context).primaryColor);
+              }
+            } catch (e) {}
+            return true;
+          }
+        case ApiStatus.INTERNET_UNAVAILABLE:
+          {
+            printLogYellow('INTERNET_UNAVAILABLE');
+            BaseUtils.showToast(S.of(context).interNetUnavailable,
+                bgColor: Colors.red);
+            break;
+          }
+        default:
+          {
+            printLogError('FAILED');
+            break;
+          }
+      }
+    });
+  }
+
+  @action
+  Future<void> addContact(BuildContext context) async {
+    await _baseAPI
+        .fetchData(ManagerAddress.addContact, method: ApiMethod.POST, headers: {
+      Consts.AUTHORIZATION: Consts.BREARER + _loginStore.user.token.toString()
+    }, body: {
+      'accountNo': accountNumberController.text,
+    }).then((value) {
+      switch (value.apiStatus) {
+        case ApiStatus.SUCCEEDED:
+          {
+            try {
+              Result result = Result.fromJson(value.object);
+              if (result.succeeded == true)
+                BaseUtils.showToast(S.of(context).addContactSuccessfully,
+                    bgColor: Theme.of(context).primaryColor);
+              else {
+                BaseUtils.showToast(S.of(context).addContactFailed,
+                    bgColor: Theme.of(context).primaryColor);
+              }
+            } catch (e) {}
+            return true;
+          }
+        case ApiStatus.INTERNET_UNAVAILABLE:
+          {
+            printLogYellow('INTERNET_UNAVAILABLE');
+            BaseUtils.showToast(S.of(context).interNetUnavailable,
+                bgColor: Colors.red);
+            break;
+          }
+        default:
+          {
+            printLogError('FAILED');
+            break;
+          }
+      }
+    });
+  }
+
+  @action
+  Future<void> getContacts(BuildContext context) async {
+    await _baseAPI
+        .fetchData(ManagerAddress.getContacts, method: ApiMethod.GET, headers: {
+      Consts.AUTHORIZATION: Consts.BREARER + _loginStore.user.token.toString()
+    }).then((value) {
+      switch (value.apiStatus) {
+        case ApiStatus.SUCCEEDED:
+          {
+            try {
+              Result result = Result.fromJson(value.object);
+              if (result.succeeded == true) {
+                contacts.clear();
+                result.resultObject
+                    .forEach((item) => contacts.add(User.fromJson(item)));
+              } else {}
+            } catch (e) {}
+            return true;
+          }
+        case ApiStatus.INTERNET_UNAVAILABLE:
+          {
+            printLogYellow('INTERNET_UNAVAILABLE');
+            BaseUtils.showToast(S.of(context).interNetUnavailable,
+                bgColor: Colors.red);
+            break;
+          }
+        default:
+          {
+            printLogError('FAILED');
+            break;
+          }
+      }
+    });
+  }
+
+  @action
+  Future<void> deleteContact(BuildContext context,
+      {required String accountNumber}) async {
+    await _baseAPI.fetchData(ManagerAddress.deleteContact,
+        method: ApiMethod.POST,
+        headers: {
+          Consts.AUTHORIZATION:
+              Consts.BREARER + _loginStore.user.token.toString()
+        },
+        body: {
+          'accountNo': accountNumber,
+        }).then((value) async {
+      switch (value.apiStatus) {
+        case ApiStatus.SUCCEEDED:
+          {
+            try {
+              Result result = Result.fromJson(value.object);
+              if (result.succeeded == true) {
+                await getContacts(context);
+              } else {
+                BaseUtils.showToast(S.of(context).deleteContactFailed,
                     bgColor: Theme.of(context).primaryColor);
               }
             } catch (e) {}

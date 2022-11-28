@@ -25,6 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountAlreadyExists":
             MessageLookupByLibrary.simpleMessage("Tài khoản đã tồn tại"),
         "accountNumber": MessageLookupByLibrary.simpleMessage("Số tài khoản"),
+        "addContactFailed":
+            MessageLookupByLibrary.simpleMessage("Lưu người nhận thất bại"),
+        "addContactSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Lưu người nhận thành công"),
         "amount": MessageLookupByLibrary.simpleMessage("Số tiền"),
         "app_name": MessageLookupByLibrary.simpleMessage("Nô bi ta"),
         "balance": MessageLookupByLibrary.simpleMessage("Số dư"),
@@ -38,7 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Đổi mật khẩu thành công"),
         "close": MessageLookupByLibrary.simpleMessage("Đóng"),
         "confirm": MessageLookupByLibrary.simpleMessage("Xác nhận"),
-        "confirmLogout":
+        "confirmAreYou":
             MessageLookupByLibrary.simpleMessage("Bạn có chắc bạn muốn"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
@@ -46,6 +50,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "copied": MessageLookupByLibrary.simpleMessage("Đã sao chép"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Tạo tài khoản mới"),
+        "delete": MessageLookupByLibrary.simpleMessage("xóa"),
+        "deleteContactFailed":
+            MessageLookupByLibrary.simpleMessage("Xóa danh bạ thất bại"),
         "description": MessageLookupByLibrary.simpleMessage("Mô tả"),
         "dozen": MessageLookupByLibrary.simpleMessage("chục"),
         "eight": MessageLookupByLibrary.simpleMessage("Tám"),
@@ -102,6 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vui lòng điền tất cả dữ liệu"),
         "receive": MessageLookupByLibrary.simpleMessage("Nhận"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng kí"),
+        "saveRecipient": MessageLookupByLibrary.simpleMessage("Lưu người nhận"),
         "scan": MessageLookupByLibrary.simpleMessage("Quét"),
         "send": MessageLookupByLibrary.simpleMessage("Gửi"),
         "sended": MessageLookupByLibrary.simpleMessage("Đã gửi"),
@@ -110,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "seventies": MessageLookupByLibrary.simpleMessage("Seventies"),
         "six": MessageLookupByLibrary.simpleMessage("Sáu"),
         "sixties": MessageLookupByLibrary.simpleMessage("Sixties"),
+        "successfully": MessageLookupByLibrary.simpleMessage("Thành công"),
         "ten": MessageLookupByLibrary.simpleMessage("Mười"),
         "theNewPasswordSame": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu mới giống với mật khẩu cũ"),

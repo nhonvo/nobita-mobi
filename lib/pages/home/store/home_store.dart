@@ -46,7 +46,9 @@ abstract class _HomeStore with Store, BaseStoreMixin {
   }
 
   @override
-  void onDispose(BuildContext context) {}
+  void onDispose(BuildContext context) {
+    _setValueDropDowns();
+  }
 
   @override
   Future<void> onWidgetBuildDone(BuildContext context) async {
@@ -55,7 +57,9 @@ abstract class _HomeStore with Store, BaseStoreMixin {
   }
 
   @override
-  void resetValue() {}
+  void resetValue() {
+    _setValueDropDowns();
+  }
 
   @action
   Future<void> getBalance(BuildContext context) async {
@@ -130,6 +134,8 @@ abstract class _HomeStore with Store, BaseStoreMixin {
   }
 
   void _setValueDropDowns() {
+    dropdownMonths.clear();
+    dropdownYears.clear();
     for (int i = 1; i <= 12; i++) {
       dropdownMonths.add(DropdownMenuItem(child: Text('$i'), value: '$i'));
     }

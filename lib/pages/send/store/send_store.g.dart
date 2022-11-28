@@ -72,6 +72,38 @@ mixin _$SendStore on _SendStore, Store {
     });
   }
 
+  late final _$_isSaveRecipientAtom =
+      Atom(name: '_SendStore._isSaveRecipient', context: context);
+
+  @override
+  bool get _isSaveRecipient {
+    _$_isSaveRecipientAtom.reportRead();
+    return super._isSaveRecipient;
+  }
+
+  @override
+  set _isSaveRecipient(bool value) {
+    _$_isSaveRecipientAtom.reportWrite(value, super._isSaveRecipient, () {
+      super._isSaveRecipient = value;
+    });
+  }
+
+  late final _$contactsAtom =
+      Atom(name: '_SendStore.contacts', context: context);
+
+  @override
+  ObservableList<User> get contacts {
+    _$contactsAtom.reportRead();
+    return super.contacts;
+  }
+
+  @override
+  set contacts(ObservableList<User> value) {
+    _$contactsAtom.reportWrite(value, super.contacts, () {
+      super.contacts = value;
+    });
+  }
+
   late final _$getInfoByIdAsyncAction =
       AsyncAction('_SendStore.getInfoById', context: context);
 
@@ -86,6 +118,32 @@ mixin _$SendStore on _SendStore, Store {
   @override
   Future<void> tranfer(BuildContext context) {
     return _$tranferAsyncAction.run(() => super.tranfer(context));
+  }
+
+  late final _$addContactAsyncAction =
+      AsyncAction('_SendStore.addContact', context: context);
+
+  @override
+  Future<void> addContact(BuildContext context) {
+    return _$addContactAsyncAction.run(() => super.addContact(context));
+  }
+
+  late final _$getContactsAsyncAction =
+      AsyncAction('_SendStore.getContacts', context: context);
+
+  @override
+  Future<void> getContacts(BuildContext context) {
+    return _$getContactsAsyncAction.run(() => super.getContacts(context));
+  }
+
+  late final _$deleteContactAsyncAction =
+      AsyncAction('_SendStore.deleteContact', context: context);
+
+  @override
+  Future<void> deleteContact(BuildContext context,
+      {required String accountNumber}) {
+    return _$deleteContactAsyncAction
+        .run(() => super.deleteContact(context, accountNumber: accountNumber));
   }
 
   late final _$_SendStoreActionController =
@@ -116,7 +174,8 @@ mixin _$SendStore on _SendStore, Store {
   @override
   String toString() {
     return '''
-currentUser: ${currentUser}
+currentUser: ${currentUser},
+contacts: ${contacts}
     ''';
   }
 }

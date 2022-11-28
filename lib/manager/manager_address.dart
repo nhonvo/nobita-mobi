@@ -21,4 +21,7 @@ class ManagerAddress {
   static const String tranfer = '$baseUser/tranfer';
   static const String getTransferHistory = '$baseUser/get-transfer-history';
   static const String changePassword = '$baseUser/change-password';
+  static const String addContact = '$baseUser/add-contact';
+  static const String getContacts = '$baseUser/get-contacts';
+  static const String deleteContact = '$baseUser/delete-contact';
 }

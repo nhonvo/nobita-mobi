@@ -601,10 +601,10 @@ class S {
   }
 
   /// `Are you sure you want to`
-  String get confirmLogout {
+  String get confirmAreYou {
     return Intl.message(
       'Are you sure you want to',
-      name: 'confirmLogout',
+      name: 'confirmAreYou',
       desc: '',
       args: [],
     );
@@ -915,6 +915,66 @@ class S {
     return Intl.message(
       'Ninety',
       name: 'ninety',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save recipient`
+  String get saveRecipient {
+    return Intl.message(
+      'Save recipient',
+      name: 'saveRecipient',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save recipient successfully`
+  String get addContactSuccessfully {
+    return Intl.message(
+      'Save recipient successfully',
+      name: 'addContactSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save recipient failed`
+  String get addContactFailed {
+    return Intl.message(
+      'Save recipient failed',
+      name: 'addContactFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Successfully`
+  String get successfully {
+    return Intl.message(
+      'Successfully',
+      name: 'successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `delete`
+  String get delete {
+    return Intl.message(
+      'delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete contact failed`
+  String get deleteContactFailed {
+    return Intl.message(
+      'Delete contact failed',
+      name: 'deleteContactFailed',
       desc: '',
       args: [],
     );

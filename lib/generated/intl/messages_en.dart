@@ -25,6 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountAlreadyExists":
             MessageLookupByLibrary.simpleMessage("Account already exists"),
         "accountNumber": MessageLookupByLibrary.simpleMessage("Account number"),
+        "addContactFailed":
+            MessageLookupByLibrary.simpleMessage("Save recipient failed"),
+        "addContactSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Save recipient successfully"),
         "amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "app_name": MessageLookupByLibrary.simpleMessage("nobita"),
         "balance": MessageLookupByLibrary.simpleMessage("Balance"),
@@ -39,7 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Change password successfully"),
         "close": MessageLookupByLibrary.simpleMessage("Close"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
-        "confirmLogout":
+        "confirmAreYou":
             MessageLookupByLibrary.simpleMessage("Are you sure you want to"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
@@ -47,6 +51,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "copied": MessageLookupByLibrary.simpleMessage("Copied"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
+        "delete": MessageLookupByLibrary.simpleMessage("delete"),
+        "deleteContactFailed":
+            MessageLookupByLibrary.simpleMessage("Delete contact failed"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
         "dozen": MessageLookupByLibrary.simpleMessage("dozen"),
         "eight": MessageLookupByLibrary.simpleMessage("Eight"),
@@ -102,6 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please fill all data"),
         "receive": MessageLookupByLibrary.simpleMessage("Receive"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "saveRecipient": MessageLookupByLibrary.simpleMessage("Save recipient"),
         "scan": MessageLookupByLibrary.simpleMessage("Scan"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "sended": MessageLookupByLibrary.simpleMessage("Sended"),
@@ -110,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "seventies": MessageLookupByLibrary.simpleMessage("Seventies"),
         "six": MessageLookupByLibrary.simpleMessage("Six"),
         "sixties": MessageLookupByLibrary.simpleMessage("Sixties"),
+        "successfully": MessageLookupByLibrary.simpleMessage("Successfully"),
         "ten": MessageLookupByLibrary.simpleMessage("Ten"),
         "theNewPasswordSame": MessageLookupByLibrary.simpleMessage(
             "The new password is the same as the old password"),
