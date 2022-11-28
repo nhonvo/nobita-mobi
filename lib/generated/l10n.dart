@@ -960,10 +960,10 @@ class S {
     );
   }
 
-  /// `delete`
+  /// `Delete`
   String get delete {
     return Intl.message(
-      'delete',
+      'Delete',
       name: 'delete',
       desc: '',
       args: [],

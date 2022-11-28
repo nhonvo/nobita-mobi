@@ -29,41 +29,48 @@ class SendPageMobile extends StatelessWidget {
             SizedBox(height: 0.1.w(context)),
             Observer(
                 builder: (_) => store.contacts.length > 0
-                    ? SizedBox(
-                        height: 77,
-                        child: ListView.builder(
-                            physics: const BouncingScrollPhysics(),
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (BuildContext context, int index) {
-                              return GestureDetector(
-                                  onTap: () {
-                                    _onTapContact(context,
-                                        contact: store.contacts[index]);
-                                  },
-                                  child: ItemContact(
-                                    user: store.contacts[index],
-                                    onPressedDelete: () {
-                                      confirmDialog(context,
-                                          textConfirm: S.of(context).delete,
-                                          icon: Icons.logout,
-                                          hightLight: ' ' +
-                                              S.of(context).delete +
-                                              ' ' +
-                                              (store.contacts[index].fullName ??
-                                                  '') +
-                                              '?',
-                                          title: S.of(context).confirmAreYou,
-                                          onConfirm: () async {
-                                        BaseNavigation.pop(context);
-                                        store.deleteContact(context,
-                                            accountNumber: store.contacts[index]
-                                                    .accountNo ??
-                                                '');
-                                      });
-                                    },
-                                  ));
-                            },
-                            itemCount: store.contacts.length))
+                    ? Padding(
+                        padding: const EdgeInsets.only(
+                            bottom: Dimens.PADDING_MEDIUM),
+                        child: SizedBox(
+                            height: 77,
+                            child: ListView.builder(
+                                physics: const BouncingScrollPhysics(),
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return GestureDetector(
+                                      onTap: () {
+                                        _onTapContact(context,
+                                            contact: store.contacts[index]);
+                                      },
+                                      child: ItemContact(
+                                        user: store.contacts[index],
+                                        onPressedDelete: () {
+                                          confirmDialog(context,
+                                              textConfirm: S.of(context).delete,
+                                              icon: Icons.logout,
+                                              hightLight: ' ' +
+                                                  S.of(context).delete +
+                                                  ' ' +
+                                                  (store.contacts[index]
+                                                          .fullName ??
+                                                      '') +
+                                                  '?',
+                                              title:
+                                                  S.of(context).confirmAreYou,
+                                              onConfirm: () async {
+                                            BaseNavigation.pop(context);
+                                            store.deleteContact(context,
+                                                accountNumber: store
+                                                        .contacts[index]
+                                                        .accountNo ??
+                                                    '');
+                                          });
+                                        },
+                                      ));
+                                },
+                                itemCount: store.contacts.length)),
+                      )
                     : const SizedBox.shrink()),
             Padding(
               padding:

@@ -51,7 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "copied": MessageLookupByLibrary.simpleMessage("Copied"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
-        "delete": MessageLookupByLibrary.simpleMessage("delete"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "deleteContactFailed":
             MessageLookupByLibrary.simpleMessage("Delete contact failed"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),

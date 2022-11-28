@@ -50,7 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "copied": MessageLookupByLibrary.simpleMessage("Đã sao chép"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Tạo tài khoản mới"),
-        "delete": MessageLookupByLibrary.simpleMessage("xóa"),
+        "delete": MessageLookupByLibrary.simpleMessage("Xóa"),
         "deleteContactFailed":
             MessageLookupByLibrary.simpleMessage("Xóa danh bạ thất bại"),
         "description": MessageLookupByLibrary.simpleMessage("Mô tả"),
