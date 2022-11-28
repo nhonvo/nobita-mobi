@@ -90,6 +90,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     descriptionController.dispose();
     amount = 0;
     isValid(context);
+    contacts.clear();
   }
 
   @override
@@ -114,6 +115,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     amountController.clear();
     descriptionController.clear();
     amount = 0;
+    contacts.clear();
   }
 
   @action

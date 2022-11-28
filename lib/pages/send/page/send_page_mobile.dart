@@ -26,7 +26,7 @@ class SendPageMobile extends StatelessWidget {
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
-            const SizedBox(height: Dimens.PADDING_MEDIUM),
+            SizedBox(height: 0.1.w(context)),
             Observer(
                 builder: (_) => store.contacts.length > 0
                     ? SizedBox(
