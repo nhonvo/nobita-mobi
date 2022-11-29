@@ -1,9 +1,7 @@
-name: Releases
-
-on: 
+on:
   push:
     tags:
-    - '*'
+      - "*"
 
 name: Build and Release apk
 jobs:
