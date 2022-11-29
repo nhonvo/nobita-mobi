@@ -1,6 +1,9 @@
+name: Releases
+
 on:
   push:
-    branches: ["dev"]
+    tags:
+      - "v*.*.*"
 
 name: Build and Release apk
 jobs:
