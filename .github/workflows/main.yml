@@ -1,4 +1,7 @@
-on: push:
+on:
+  push:
+    branches: ["dev"]
+
 name: Build and Release apk
 jobs:
   build_apk:
