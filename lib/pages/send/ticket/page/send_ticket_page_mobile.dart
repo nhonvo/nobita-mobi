@@ -10,7 +10,6 @@ import 'package:nobita/theme/shadows.dart';
 import 'package:nobita/widgets/others/item_history_transfer.dart';
 import 'package:nobita/widgets/others/show_loading.dart';
 import 'package:intl/intl.dart' as intl;
-
 import '../../../../theme/dimens.dart';
 
 class SendTicketPageMobile extends StatelessWidget {
@@ -58,7 +57,9 @@ class SendTicketPageMobile extends StatelessWidget {
                                 return Text(
                                     store.sendStore.isSended
                                         ? S.of(context).sended
-                                        : S.of(context).infoReceiver,
+                                        : (store.sendStore.isResult)
+                                            ? S.of(context).sendFailed
+                                            : S.of(context).infoReceiver,
                                     style: Theme.of(context)
                                         .textTheme
                                         .displayLarge
@@ -163,20 +164,13 @@ class SendTicketPageMobile extends StatelessWidget {
                               BaseButton(
                                   bgColor: Theme.of(context).disabledColor,
                                   onPressed: () {
-                                    if (store.sendStore.isSended) {
-                                      store.sendStore.resetValue();
-                                      BaseNavigation.push(context,
-                                          routeName: ManagerRoutes.home,
-                                          clearStack: true);
-                                    } else {
-                                      BaseNavigation.pop(context);
-                                    }
+                                    _onPressedCancel.call(context);
                                   },
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                          store.sendStore.isSended
+                                          store.sendStore.isResult
                                               ? S.of(context).close
                                               : S.of(context).cancel,
                                           style: Theme.of(context)
@@ -184,13 +178,11 @@ class SendTicketPageMobile extends StatelessWidget {
                                               .labelLarge)
                                     ],
                                   )),
-                              if (!store.sendStore.isSended)
+                              if (!store.sendStore.isResult)
                                 BaseButton(
                                     bgColor: Theme.of(context).primaryColor,
-                                    onPressed: () async {
-                                      store.isShowLoading = true;
-                                      await store.sendStore.tranfer(context);
-                                      store.isShowLoading = false;
+                                    onPressed: () {
+                                      _onPressedSend.call(context);
                                     },
                                     child: Row(
                                       mainAxisAlignment:
@@ -237,5 +229,21 @@ class SendTicketPageMobile extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _onPressedCancel(BuildContext context) {
+    if (store.sendStore.isResult) {
+      BaseNavigation.push(context,
+          routeName: ManagerRoutes.home, clearStack: true);
+    } else {
+      BaseNavigation.pop(context);
+    }
+  }
+
+  void _onPressedSend(BuildContext context) async {
+    store.isShowLoading = true;
+    store.sendStore.sendSms(context);
+    BaseNavigation.push(context, routeName: ManagerRoutes.sendOTP);
+    store.isShowLoading = false;
   }
 }

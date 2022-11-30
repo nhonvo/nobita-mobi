@@ -23,6 +23,7 @@ class ManagerRoutes {
   static String send = '/send';
   static String sendTicket = '/sendTicket';
   static String changePassword = '/changePassword';
+  static String sendOTP = '/sendOTP';
 
   /// ## Manager contain all action routes of the app
   /// * [splashScreen] is the splash screen of the app and it is the first screen of the app
@@ -36,6 +37,7 @@ class ManagerRoutes {
     scan: (context) => const ScanPage(),
     send: (context) => const SendPage(),
     sendTicket: (context) => const SendTicketPage(),
-    changePassword: (context) => const ChangePasswordPage()
+    changePassword: (context) => const ChangePasswordPage(),
+    sendOTP: (context) => const SendOTPPage()
   };
 }

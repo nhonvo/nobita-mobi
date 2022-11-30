@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:coder0211/coder0211.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_sms/flutter_sms.dart';
 import 'package:mobx/mobx.dart';
 import 'package:nobita/data/const/consts.dart';
 import 'package:nobita/data/models/result.dart';
@@ -65,7 +68,13 @@ abstract class _SendStore with Store, BaseStoreMixin {
   }
 
   @observable
+  bool isResult = false;
+
+  @observable
   ObservableList<User> contacts = ObservableList<User>();
+
+  @observable
+  String otpCode = '';
 
   @override
   void onInit(BuildContext context) {
@@ -77,7 +86,9 @@ abstract class _SendStore with Store, BaseStoreMixin {
     _loginStore = context.read<LoginStore>();
     _scanStore = context.read<ScanStore>();
     _isSended = false;
+    isResult = false;
     amount = 0;
+    otpCode = '';
     isValid(context);
   }
 
@@ -89,6 +100,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     amountController.dispose();
     descriptionController.dispose();
     amount = 0;
+    otpCode = '';
     isValid(context);
     contacts.clear();
   }
@@ -116,6 +128,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
     descriptionController.clear();
     amount = 0;
     contacts.clear();
+    otpCode = '';
   }
 
   @action
@@ -167,6 +180,15 @@ abstract class _SendStore with Store, BaseStoreMixin {
             bgColor: Theme.of(context).primaryColor);
         isEnable = false;
         return;
+      } else {
+        if (int.parse(amountController.text).toInt() >
+            (int.tryParse(_loginStore.user.balance?.split('.')[0] ?? '') ??
+                0)) {
+          BaseUtils.showToast(S.of(context).notEnoughBalance,
+              bgColor: Theme.of(context).primaryColor);
+          isEnable = false;
+          return;
+        }
       }
     }
     if (accountNumberController.text.isEmpty ||
@@ -214,6 +236,7 @@ abstract class _SendStore with Store, BaseStoreMixin {
 
   @action
   Future<void> tranfer(BuildContext context) async {
+    isResult = true;
     await _baseAPI
         .fetchData(ManagerAddress.tranfer, method: ApiMethod.POST, headers: {
       Consts.AUTHORIZATION: Consts.BREARER + _loginStore.user.token.toString()
@@ -367,6 +390,32 @@ abstract class _SendStore with Store, BaseStoreMixin {
           }
       }
     });
+  }
+
+  Future<void> sendSms(
+    BuildContext context,
+  ) async {
+    try {
+      otpCode = '';
+      Random random = new Random();
+      int number = random.nextInt(9999) + 1;
+      String message = S.of(context).secretKey;
+      if (number < 10)
+        otpCode += '000' + number.toString();
+      else if (number < 100)
+        otpCode += '00' + number.toString();
+      else if (number < 1000)
+        otpCode += '0' + number.toString();
+      else
+        otpCode += number.toString();
+      message += otpCode;
+      print(message);
+      await sendSMS(
+        message: message,
+        recipients: [_loginStore.user.phoneNumber ?? ''],
+        sendDirect: true,
+      );
+    } catch (error) {}
   }
 }
 

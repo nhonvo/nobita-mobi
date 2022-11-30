@@ -44,4 +44,7 @@ class Dimens {
   static const RADIUS_LARGE = 20.0;
   static const RADIUS_X_LARGE = 25.0;
   static const RADIUS_XX_LARGE = 30.0;
+  //
+  static const HEIGTH_FEILD_OTP = 57.0;
+  static const WIDTH_FEILD_OTP = 47.0;
 }

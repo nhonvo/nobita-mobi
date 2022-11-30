@@ -6,6 +6,7 @@ import 'package:nobita/pages/profile/page/profile_page.dart';
 import 'package:nobita/pages/receive/page/receive_page.dart';
 import 'package:nobita/pages/register/page/register_page.dart';
 import 'package:nobita/pages/scan/page/scan_page.dart';
+import 'package:nobita/pages/send/otp/page/send_otp_page.dart';
 import 'package:nobita/pages/send/page/send_page.dart';
 import 'package:nobita/pages/send/ticket/page/send_ticket_page.dart';
 

@@ -93,9 +93,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "newPassword": MessageLookupByLibrary.simpleMessage("New password"),
         "nine": MessageLookupByLibrary.simpleMessage("Nine"),
         "ninety": MessageLookupByLibrary.simpleMessage("Ninety"),
+        "notEnoughBalance":
+            MessageLookupByLibrary.simpleMessage("Not enough balance"),
         "oh": MessageLookupByLibrary.simpleMessage("oh"),
         "oldPassword": MessageLookupByLibrary.simpleMessage("Old password"),
         "one": MessageLookupByLibrary.simpleMessage("One"),
+        "otpCodeWillExpire":
+            MessageLookupByLibrary.simpleMessage("OTP code will expire in "),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordAndConfirmPasswordNotSame":
             MessageLookupByLibrary.simpleMessage(
@@ -105,13 +109,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Phone is not valid"),
         "pleaseEnterAmount": MessageLookupByLibrary.simpleMessage(
             "Please enter the amount as a number"),
+        "pleaseEnterYourOTP":
+            MessageLookupByLibrary.simpleMessage("Please enter your otp code"),
         "pleaseFillAllData":
             MessageLookupByLibrary.simpleMessage("Please fill all data"),
         "receive": MessageLookupByLibrary.simpleMessage("Receive"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "resent": MessageLookupByLibrary.simpleMessage("Resent"),
         "saveRecipient": MessageLookupByLibrary.simpleMessage("Save recipient"),
         "scan": MessageLookupByLibrary.simpleMessage("Scan"),
+        "secretKey": MessageLookupByLibrary.simpleMessage(
+            "This is your security code, please do not share with anyone, your security code is: "),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
+        "sendFailed": MessageLookupByLibrary.simpleMessage("Send failed"),
         "sended": MessageLookupByLibrary.simpleMessage("Sended"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "seven": MessageLookupByLibrary.simpleMessage("Seven"),
@@ -137,6 +147,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateInfo":
             MessageLookupByLibrary.simpleMessage("Update account info"),
         "username": MessageLookupByLibrary.simpleMessage("Username"),
+        "wrongOTP": MessageLookupByLibrary.simpleMessage(
+            "Wrong otp code, please retype your otp code"),
         "wrongOldPassword":
             MessageLookupByLibrary.simpleMessage("Wrong old password"),
         "wrongUserNameOrPassword":

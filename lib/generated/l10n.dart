@@ -979,6 +979,76 @@ class S {
       args: [],
     );
   }
+
+  /// `This is your security code, please do not share with anyone, your security code is: `
+  String get secretKey {
+    return Intl.message(
+      'This is your security code, please do not share with anyone, your security code is: ',
+      name: 'secretKey',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OTP code will expire in `
+  String get otpCodeWillExpire {
+    return Intl.message(
+      'OTP code will expire in ',
+      name: 'otpCodeWillExpire',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your otp code`
+  String get pleaseEnterYourOTP {
+    return Intl.message(
+      'Please enter your otp code',
+      name: 'pleaseEnterYourOTP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resent`
+  String get resent {
+    return Intl.message(
+      'Resent',
+      name: 'resent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong otp code, please retype your otp code`
+  String get wrongOTP {
+    return Intl.message(
+      'Wrong otp code, please retype your otp code',
+      name: 'wrongOTP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send failed`
+  String get sendFailed {
+    return Intl.message(
+      'Send failed',
+      name: 'sendFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not enough balance`
+  String get notEnoughBalance {
+    return Intl.message(
+      'Not enough balance',
+      name: 'notEnoughBalance',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

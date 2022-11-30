@@ -12,6 +12,7 @@ class User {
   final String? accountNo;
   String? balance;
   String? token;
+  String? phoneNumber;
   User(
       {this.fullName,
       this.id,

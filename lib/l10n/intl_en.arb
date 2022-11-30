@@ -91,5 +91,12 @@
     "addContactFailed": "Save recipient failed",
     "successfully": "Successfully",
     "delete": "Delete",
-    "deleteContactFailed": "Delete contact failed"
+    "deleteContactFailed": "Delete contact failed",
+    "secretKey": "This is your security code, please do not share with anyone, your security code is: ",
+    "otpCodeWillExpire": "OTP code will expire in ",
+    "pleaseEnterYourOTP": "Please enter your otp code",
+    "resent": "Resent",
+    "wrongOTP": "Wrong otp code, please retype your otp code",
+    "sendFailed": "Send failed",
+    "notEnoughBalance": "Not enough balance"
 }

@@ -33,7 +33,7 @@ class SendPageMobile extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             bottom: Dimens.PADDING_MEDIUM),
                         child: SizedBox(
-                            height: 77,
+                            height: 85,
                             child: ListView.builder(
                                 physics: const BouncingScrollPhysics(),
                                 scrollDirection: Axis.horizontal,

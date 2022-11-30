@@ -93,9 +93,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "newPassword": MessageLookupByLibrary.simpleMessage("Mật khẩu mới"),
         "nine": MessageLookupByLibrary.simpleMessage("Chín"),
         "ninety": MessageLookupByLibrary.simpleMessage("Ninety"),
+        "notEnoughBalance":
+            MessageLookupByLibrary.simpleMessage("Không đủ số dư"),
         "oh": MessageLookupByLibrary.simpleMessage("không"),
         "oldPassword": MessageLookupByLibrary.simpleMessage("Mật khẩu cũ"),
         "one": MessageLookupByLibrary.simpleMessage("Một"),
+        "otpCodeWillExpire": MessageLookupByLibrary.simpleMessage(
+            "Mã OTP của bạn sẽ hết hạn trong "),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordAndConfirmPasswordNotSame":
             MessageLookupByLibrary.simpleMessage(
@@ -105,13 +109,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sai định dạng số điện thoại"),
         "pleaseEnterAmount": MessageLookupByLibrary.simpleMessage(
             "Vui lòng nhập số tiền dưới dạng số"),
+        "pleaseEnterYourOTP": MessageLookupByLibrary.simpleMessage(
+            "Vui lòng điền mã OTP của bạn"),
         "pleaseFillAllData": MessageLookupByLibrary.simpleMessage(
             "Vui lòng điền tất cả dữ liệu"),
         "receive": MessageLookupByLibrary.simpleMessage("Nhận"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng kí"),
+        "resent": MessageLookupByLibrary.simpleMessage("Gửi lại"),
         "saveRecipient": MessageLookupByLibrary.simpleMessage("Lưu người nhận"),
         "scan": MessageLookupByLibrary.simpleMessage("Quét"),
+        "secretKey": MessageLookupByLibrary.simpleMessage(
+            "Đây là mã bảo vệ của bạn, vui lòng không chia sẽ với bất kì ai, mã bảo vệ của bạn là: "),
         "send": MessageLookupByLibrary.simpleMessage("Gửi"),
+        "sendFailed": MessageLookupByLibrary.simpleMessage("Gửi lỗi"),
         "sended": MessageLookupByLibrary.simpleMessage("Đã gửi"),
         "settings": MessageLookupByLibrary.simpleMessage("Cài đặt"),
         "seven": MessageLookupByLibrary.simpleMessage("Bảy"),
@@ -137,6 +147,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateInfo": MessageLookupByLibrary.simpleMessage(
             "Cập nhật thông tin tài khoản"),
         "username": MessageLookupByLibrary.simpleMessage("Tài khoản"),
+        "wrongOTP":
+            MessageLookupByLibrary.simpleMessage("Sai OTP vui lòng nhập lại"),
         "wrongOldPassword":
             MessageLookupByLibrary.simpleMessage("Mật khẩu cũ nhập sai"),
         "wrongUserNameOrPassword":

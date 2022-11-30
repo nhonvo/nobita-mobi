@@ -8,6 +8,7 @@ import 'package:nobita/pages/receive/page/receive_page.dart';
 import 'package:nobita/pages/receive/store/receive_store.dart';
 import 'package:nobita/pages/register/store/register_store.dart';
 import 'package:nobita/pages/scan/store/scan_store.dart';
+import 'package:nobita/pages/send/otp/store/send_otp_store.dart';
 import 'package:nobita/pages/send/page/send_page.dart';
 import 'package:nobita/pages/send/store/send_store.dart';
 import 'package:nobita/pages/send/ticket/store/send_ticket_store.dart';
@@ -38,6 +39,7 @@ class ManagerProvider {
     Provider<SendStore>(create: (_) => SendStore()),
     Provider<SendTicketStore>(create: (_) => SendTicketStore()),
     Provider<ChangePasswordStore>(create: (_) => ChangePasswordStore()),
+    Provider<SendOTPStore>(create: (_) => SendOTPStore())
   ];
 
   /// ## Dispose
@@ -60,5 +62,6 @@ class ManagerProvider {
     context.read<SendStore>().resetValue();
     context.read<SendTicketStore>().resetValue();
     context.read<ChangePasswordStore>().resetValue();
+    context.read<SendOTPStore>().resetValue();
   }
 }

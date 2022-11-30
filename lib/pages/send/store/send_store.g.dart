@@ -88,6 +88,22 @@ mixin _$SendStore on _SendStore, Store {
     });
   }
 
+  late final _$isResultAtom =
+      Atom(name: '_SendStore.isResult', context: context);
+
+  @override
+  bool get isResult {
+    _$isResultAtom.reportRead();
+    return super.isResult;
+  }
+
+  @override
+  set isResult(bool value) {
+    _$isResultAtom.reportWrite(value, super.isResult, () {
+      super.isResult = value;
+    });
+  }
+
   late final _$contactsAtom =
       Atom(name: '_SendStore.contacts', context: context);
 
@@ -101,6 +117,21 @@ mixin _$SendStore on _SendStore, Store {
   set contacts(ObservableList<User> value) {
     _$contactsAtom.reportWrite(value, super.contacts, () {
       super.contacts = value;
+    });
+  }
+
+  late final _$otpCodeAtom = Atom(name: '_SendStore.otpCode', context: context);
+
+  @override
+  String get otpCode {
+    _$otpCodeAtom.reportRead();
+    return super.otpCode;
+  }
+
+  @override
+  set otpCode(String value) {
+    _$otpCodeAtom.reportWrite(value, super.otpCode, () {
+      super.otpCode = value;
     });
   }
 
@@ -175,7 +206,9 @@ mixin _$SendStore on _SendStore, Store {
   String toString() {
     return '''
 currentUser: ${currentUser},
-contacts: ${contacts}
+isResult: ${isResult},
+contacts: ${contacts},
+otpCode: ${otpCode}
     ''';
   }
 }

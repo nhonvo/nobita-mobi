@@ -91,5 +91,12 @@
     "addContactFailed": "Lưu người nhận thất bại",
     "successfully": "Thành công",
     "delete": "Xóa",
-    "deleteContactFailed": "Xóa danh bạ thất bại"
+    "deleteContactFailed": "Xóa danh bạ thất bại",
+    "secretKey": "Đây là mã bảo vệ của bạn, vui lòng không chia sẽ với bất kì ai, mã bảo vệ của bạn là: ",
+    "otpCodeWillExpire": "Mã OTP của bạn sẽ hết hạn trong ",
+    "pleaseEnterYourOTP": "Vui lòng điền mã OTP của bạn",
+    "resent": "Gửi lại",
+    "wrongOTP": "Sai OTP vui lòng nhập lại",
+    "sendFailed": "Gửi lỗi",
+    "notEnoughBalance": "Không đủ số dư"
 }

@@ -16,4 +16,7 @@ class Consts {
   static const MAIL_TO = 'mailto';
   static const BREARER = 'Bearer ';
   static const CUREENTCY = 'VND';
+  static const LENGTH_OTP = 4;
+  static const TIME_EXPIRE = 180;
+  static const DURATION_OTP = 1;
 }

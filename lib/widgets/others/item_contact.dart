@@ -18,6 +18,7 @@ class ItemContact extends StatelessWidget {
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 padding: const EdgeInsets.all(Dimens.PADDING_LARGE),
