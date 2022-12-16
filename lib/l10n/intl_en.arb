@@ -98,5 +98,15 @@
     "resent": "Resent",
     "wrongOTP": "Wrong otp code, please retype your otp code",
     "sendFailed": "Send failed",
-    "notEnoughBalance": "Not enough balance"
+    "notEnoughBalance": "Not enough balance",
+    "lixiCreate": "Lixi create",
+    "lixiSend": "Lixi send",
+    "lixiReceive": "Lixi receive",
+    "create": "Create",
+    "join": "Join",
+    "yourAreHavingLucky": "You are having lucky money with the level of",
+    "participant": "Participant",
+    "pleaseWait": "Please wait ...",
+    "leave": "Leave",
+    "areYouSureYouWantToLeave": "Are you sure you want to leave"
 }

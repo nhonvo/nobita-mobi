@@ -1049,6 +1049,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Lixi create`
+  String get lixiCreate {
+    return Intl.message(
+      'Lixi create',
+      name: 'lixiCreate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lixi send`
+  String get lixiSend {
+    return Intl.message(
+      'Lixi send',
+      name: 'lixiSend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lixi receive`
+  String get lixiReceive {
+    return Intl.message(
+      'Lixi receive',
+      name: 'lixiReceive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create`
+  String get create {
+    return Intl.message(
+      'Create',
+      name: 'create',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Join`
+  String get join {
+    return Intl.message(
+      'Join',
+      name: 'join',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You are having lucky money with the level of`
+  String get yourAreHavingLucky {
+    return Intl.message(
+      'You are having lucky money with the level of',
+      name: 'yourAreHavingLucky',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Participant`
+  String get participant {
+    return Intl.message(
+      'Participant',
+      name: 'participant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please wait ...`
+  String get pleaseWait {
+    return Intl.message(
+      'Please wait ...',
+      name: 'pleaseWait',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Leave`
+  String get leave {
+    return Intl.message(
+      'Leave',
+      name: 'leave',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to leave`
+  String get areYouSureYouWantToLeave {
+    return Intl.message(
+      'Are you sure you want to leave',
+      name: 'areYouSureYouWantToLeave',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

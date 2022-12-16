@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:nobita/data/const/consts.dart';
 import 'package:nobita/generated/l10n.dart';
+import 'package:nobita/manager/manager_key_storage.dart';
 import 'package:nobita/manager/manager_path_routes.dart';
 import 'package:nobita/pages/home/store/home_store.dart';
 import 'package:nobita/pages/profile/page/profile_page.dart';
@@ -132,14 +133,16 @@ class HomePageMobile extends StatelessWidget {
                               BTNHomeFeature(
                                 imagePath: Images.iconLixi,
                                 lable: S.of(context).lixi,
-                                onPressed: () {},
+                                onPressed: () async {
+                                  await _onPressedLixi.call(context);
+                                },
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
                                     right: Dimens.SCREEN_PADDING),
                                 child: BTNHomeFeature(
                                   imagePath: Images.iconRocket,
-                                  lable: 'Recieve',
+                                  lable: 'Others',
                                   onPressed: () {},
                                 ),
                               ),
@@ -306,5 +309,26 @@ class HomePageMobile extends StatelessWidget {
 
   void _onPressedSend(BuildContext context) {
     BaseNavigation.push(context, routeName: ManagerRoutes.send);
+  }
+
+  Future<void> _onPressedLixi(BuildContext context) async {
+    if (await BaseSharedPreferences.containKey(ManagerKeyStorage.isOwnerLixi)) {
+      if (await BaseSharedPreferences.getBoolValue(
+              ManagerKeyStorage.isOwnerLixi) ==
+          true) {
+        BaseNavigation.push(context, routeName: ManagerRoutes.lixiSend);
+        return;
+      }
+    }
+
+    if (await BaseSharedPreferences.containKey(ManagerKeyStorage.idJoined)) {
+      if (await BaseSharedPreferences.getStringValue(
+              ManagerKeyStorage.idJoined) !=
+          '') {
+        BaseNavigation.push(context, routeName: ManagerRoutes.lixiReceive);
+        return;
+      }
+    }
+    BaseNavigation.push(context, routeName: ManagerRoutes.lixi);
   }
 }

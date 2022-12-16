@@ -13,4 +13,6 @@ class ManagerKeyStorage {
   static const String language = 'LANGUAGE';
   static const String theme = 'THEME';
   static const String user = 'USER';
+  static const String isOwnerLixi = 'IS_OWNER_LIXI';
+  static const String idJoined = 'ID_JOINED_LIXI';
 }

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nobita/pages/change_password/store/change_password_store.dart';
 import 'package:nobita/pages/home/store/home_store.dart';
+import 'package:nobita/pages/lixi/create/store/lixi_create_store.dart';
+import 'package:nobita/pages/lixi/receive/store/lixi_receive_store.dart';
+import 'package:nobita/pages/lixi/send/store/lixi_send_store.dart';
+import 'package:nobita/pages/lixi/store/lixi_store.dart';
 import 'package:nobita/pages/login/store/login_store.dart';
 import 'package:nobita/pages/main/store/main_store.dart';
 import 'package:nobita/pages/profile/store/profile_store.dart';
@@ -39,7 +43,11 @@ class ManagerProvider {
     Provider<SendStore>(create: (_) => SendStore()),
     Provider<SendTicketStore>(create: (_) => SendTicketStore()),
     Provider<ChangePasswordStore>(create: (_) => ChangePasswordStore()),
-    Provider<SendOTPStore>(create: (_) => SendOTPStore())
+    Provider<SendOTPStore>(create: (_) => SendOTPStore()),
+    Provider<LixiStore>(create: (_) => LixiStore()),
+    Provider<LixiSendStore>(create: (_) => LixiSendStore()),
+    Provider<LixiCreateStore>(create: (_) => LixiCreateStore()),
+    Provider<LixiReceiveStore>(create: (_) => LixiReceiveStore())
   ];
 
   /// ## Dispose
@@ -63,5 +71,9 @@ class ManagerProvider {
     context.read<SendTicketStore>().resetValue();
     context.read<ChangePasswordStore>().resetValue();
     context.read<SendOTPStore>().resetValue();
+    context.read<LixiStore>().resetValue();
+    context.read<LixiSendStore>().resetValue();
+    context.read<LixiCreateStore>().resetValue();
+    context.read<LixiReceiveStore>().resetValue();
   }
 }

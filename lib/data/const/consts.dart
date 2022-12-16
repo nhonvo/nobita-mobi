@@ -19,4 +19,10 @@ class Consts {
   static const LENGTH_OTP = 4;
   static const TIME_EXPIRE = 180;
   static const DURATION_OTP = 1;
+  static const URL_IMAGE_LIXI_RECEIVE =
+      'https://i.pinimg.com/originals/86/ed/2c/86ed2c43bde877a4c34891e5649d6c8f.gif';
+  static const URL_IMAGE_LIXI =
+      'https://i.pinimg.com/originals/55/fe/22/55fe223d6c68eeb23ae1a603304bf9ff.gif';
+  static const URL_IMAGE_LIXI_SEND =
+      'https://i.pinimg.com/originals/0f/ca/ac/0fcaac1b0982efc0632f9681ff4ca6df.gif';
 }

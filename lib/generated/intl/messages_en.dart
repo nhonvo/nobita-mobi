@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Save recipient successfully"),
         "amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "app_name": MessageLookupByLibrary.simpleMessage("nobita"),
+        "areYouSureYouWantToLeave": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to leave"),
         "balance": MessageLookupByLibrary.simpleMessage("Balance"),
         "billion": MessageLookupByLibrary.simpleMessage("billion"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -49,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "continueT": MessageLookupByLibrary.simpleMessage("Continue"),
         "copied": MessageLookupByLibrary.simpleMessage("Copied"),
+        "create": MessageLookupByLibrary.simpleMessage("Create"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create a new account"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -83,8 +86,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "infoReceiver": MessageLookupByLibrary.simpleMessage("Info Receiver"),
         "interNetUnavailable":
             MessageLookupByLibrary.simpleMessage("INTERNET UNAVAILABLE"),
+        "join": MessageLookupByLibrary.simpleMessage("Join"),
         "languages": MessageLookupByLibrary.simpleMessage("Languages"),
+        "leave": MessageLookupByLibrary.simpleMessage("Leave"),
         "lixi": MessageLookupByLibrary.simpleMessage("Lixi"),
+        "lixiCreate": MessageLookupByLibrary.simpleMessage("Lixi create"),
+        "lixiReceive": MessageLookupByLibrary.simpleMessage("Lixi receive"),
+        "lixiSend": MessageLookupByLibrary.simpleMessage("Lixi send"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "million": MessageLookupByLibrary.simpleMessage("million"),
@@ -100,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "one": MessageLookupByLibrary.simpleMessage("One"),
         "otpCodeWillExpire":
             MessageLookupByLibrary.simpleMessage("OTP code will expire in "),
+        "participant": MessageLookupByLibrary.simpleMessage("Participant"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordAndConfirmPasswordNotSame":
             MessageLookupByLibrary.simpleMessage(
@@ -113,6 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter your otp code"),
         "pleaseFillAllData":
             MessageLookupByLibrary.simpleMessage("Please fill all data"),
+        "pleaseWait": MessageLookupByLibrary.simpleMessage("Please wait ..."),
         "receive": MessageLookupByLibrary.simpleMessage("Receive"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "resent": MessageLookupByLibrary.simpleMessage("Resent"),
@@ -152,6 +162,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "wrongOldPassword":
             MessageLookupByLibrary.simpleMessage("Wrong old password"),
         "wrongUserNameOrPassword":
-            MessageLookupByLibrary.simpleMessage("Wrong User Name or Password")
+            MessageLookupByLibrary.simpleMessage("Wrong User Name or Password"),
+        "yourAreHavingLucky": MessageLookupByLibrary.simpleMessage(
+            "You are having lucky money with the level of")
       };
 }

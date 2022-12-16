@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lưu người nhận thành công"),
         "amount": MessageLookupByLibrary.simpleMessage("Số tiền"),
         "app_name": MessageLookupByLibrary.simpleMessage("Nô bi ta"),
+        "areYouSureYouWantToLeave":
+            MessageLookupByLibrary.simpleMessage("Bạn có chắc bạn muốn thoát"),
         "balance": MessageLookupByLibrary.simpleMessage("Số dư"),
         "billion": MessageLookupByLibrary.simpleMessage("tỉ"),
         "cancel": MessageLookupByLibrary.simpleMessage("Hủy"),
@@ -48,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
         "continueT": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
         "copied": MessageLookupByLibrary.simpleMessage("Đã sao chép"),
+        "create": MessageLookupByLibrary.simpleMessage("Tạo"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Tạo tài khoản mới"),
         "delete": MessageLookupByLibrary.simpleMessage("Xóa"),
@@ -83,8 +86,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thông tin người nhận"),
         "interNetUnavailable":
             MessageLookupByLibrary.simpleMessage("INTERNET KHÔNG KHẢ DỤNG"),
+        "join": MessageLookupByLibrary.simpleMessage("Tham gia"),
         "languages": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
+        "leave": MessageLookupByLibrary.simpleMessage("Thoát"),
         "lixi": MessageLookupByLibrary.simpleMessage("Lixi"),
+        "lixiCreate": MessageLookupByLibrary.simpleMessage("Tạo lì xì"),
+        "lixiReceive": MessageLookupByLibrary.simpleMessage("Nhận lì xì"),
+        "lixiSend": MessageLookupByLibrary.simpleMessage("Gửi lì xì"),
         "login": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
         "million": MessageLookupByLibrary.simpleMessage("triệu"),
@@ -100,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "one": MessageLookupByLibrary.simpleMessage("Một"),
         "otpCodeWillExpire": MessageLookupByLibrary.simpleMessage(
             "Mã OTP của bạn sẽ hết hạn trong "),
+        "participant": MessageLookupByLibrary.simpleMessage("Thành viên"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "passwordAndConfirmPasswordNotSame":
             MessageLookupByLibrary.simpleMessage(
@@ -113,6 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vui lòng điền mã OTP của bạn"),
         "pleaseFillAllData": MessageLookupByLibrary.simpleMessage(
             "Vui lòng điền tất cả dữ liệu"),
+        "pleaseWait": MessageLookupByLibrary.simpleMessage("Vui lòng chờ ..."),
         "receive": MessageLookupByLibrary.simpleMessage("Nhận"),
         "register": MessageLookupByLibrary.simpleMessage("Đăng kí"),
         "resent": MessageLookupByLibrary.simpleMessage("Gửi lại"),
@@ -152,6 +162,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "wrongOldPassword":
             MessageLookupByLibrary.simpleMessage("Mật khẩu cũ nhập sai"),
         "wrongUserNameOrPassword":
-            MessageLookupByLibrary.simpleMessage("Sai tài khoản hoặc mật khẩu")
+            MessageLookupByLibrary.simpleMessage("Sai tài khoản hoặc mật khẩu"),
+        "yourAreHavingLucky":
+            MessageLookupByLibrary.simpleMessage("Bạn đang có lì xì với mức là")
       };
 }

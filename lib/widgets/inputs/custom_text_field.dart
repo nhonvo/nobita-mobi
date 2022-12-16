@@ -21,6 +21,7 @@ class CustomTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final List<TextInputFormatter> formatterList;
   final String? title;
+  final TextAlign? textAlign;
   const CustomTextField(
       {Key? key,
       this.hintText,
@@ -45,6 +46,7 @@ class CustomTextField extends StatelessWidget {
       this.isNotShowBG = false,
       required this.isEditMode,
       required this.cusorColor,
+      this.textAlign,
       this.title})
       : super(key: key);
 
@@ -82,6 +84,7 @@ class CustomTextField extends StatelessWidget {
               cursorColor: cusorColor,
               keyboardType: keyboardType,
               maxLines: maxLines,
+              textAlign: textAlign ?? TextAlign.start,
               controller: textEditingController,
               obscuringCharacter: obscuringCharacter,
               obscureText: isModePassword,

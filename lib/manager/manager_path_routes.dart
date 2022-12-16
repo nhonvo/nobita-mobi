@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nobita/pages/change_password/page/change_password_page.dart';
 import 'package:nobita/pages/home/page/home_page.dart';
+import 'package:nobita/pages/lixi/create/page/lixi_create_page.dart';
+import 'package:nobita/pages/lixi/page/lixi_page.dart';
+import 'package:nobita/pages/lixi/receive/page/lixi_receive_page.dart';
+import 'package:nobita/pages/lixi/send/page/lixi_send_page.dart';
 import 'package:nobita/pages/login/page/login_page.dart';
 import 'package:nobita/pages/profile/page/profile_page.dart';
 import 'package:nobita/pages/receive/page/receive_page.dart';

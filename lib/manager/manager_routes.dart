@@ -24,6 +24,10 @@ class ManagerRoutes {
   static String sendTicket = '/sendTicket';
   static String changePassword = '/changePassword';
   static String sendOTP = '/sendOTP';
+  static String lixi = '/lixi';
+  static String lixiSend = '/lixiSend';
+  static String lixiCreate = '/lixiCreate';
+  static String lixiReceive = '/lixiReceive';
 
   /// ## Manager contain all action routes of the app
   /// * [splashScreen] is the splash screen of the app and it is the first screen of the app
@@ -38,6 +42,10 @@ class ManagerRoutes {
     send: (context) => const SendPage(),
     sendTicket: (context) => const SendTicketPage(),
     changePassword: (context) => const ChangePasswordPage(),
-    sendOTP: (context) => const SendOTPPage()
+    sendOTP: (context) => const SendOTPPage(),
+    lixi: (context) => const LixiPage(),
+    lixiSend: (context) => const LixiSendPage(),
+    lixiCreate: (context) => const LixiCreatePage(),
+    lixiReceive: (context) => const LixiReceivePage()
   };
 }

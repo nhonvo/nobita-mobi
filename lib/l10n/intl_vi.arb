@@ -98,5 +98,15 @@
     "resent": "Gửi lại",
     "wrongOTP": "Sai OTP vui lòng nhập lại",
     "sendFailed": "Gửi lỗi",
-    "notEnoughBalance": "Không đủ số dư"
+    "notEnoughBalance": "Không đủ số dư",
+    "lixiCreate": "Tạo lì xì",
+    "lixiSend": "Gửi lì xì",
+    "lixiReceive": "Nhận lì xì",
+    "create": "Tạo",
+    "join": "Tham gia",
+    "yourAreHavingLucky": "Bạn đang có lì xì với mức là",
+    "participant": "Thành viên",
+    "pleaseWait": "Vui lòng chờ ...",
+    "leave": "Thoát",
+    "areYouSureYouWantToLeave": "Bạn có chắc bạn muốn thoát"
 }
