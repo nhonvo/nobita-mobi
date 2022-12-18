@@ -68,6 +68,7 @@ abstract class _LixiReceiveStore with Store, BaseStoreMixin {
               if (result.succeeded == true) {
               } else {
                 BaseNavigation.pop(context);
+                await BaseSharedPreferences.remove(ManagerKeyStorage.idJoined);
               }
             } catch (e) {}
             return true;
